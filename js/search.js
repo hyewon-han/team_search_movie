@@ -1,9 +1,9 @@
 const movieCards = document.querySelector(".movie-cards");
+const searchValue = document.getElementById("search__value");
+const searchBtn = document.querySelector(".search__btn");
 
 export function searchMovie() {
   const movieCard = movieCards.querySelectorAll(".movie-card");
-  const searchValue = document.getElementById("search__value");
-  const searchBtn = document.querySelector(".search__btn");
 
   function handleSearch(e) {
     e.preventDefault();
