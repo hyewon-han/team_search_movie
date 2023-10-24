@@ -1,6 +1,5 @@
 import { searchMovie } from "./search.js";
 import { addMovie } from "./movie.js";
-import { movieID } from "./movie.js";
 
 const options = {
   method: "GET",
@@ -23,10 +22,4 @@ fetch(
     });
   })
   .then(searchMovie)
-  .then(() => {
-    movieID.forEach((id) => {
-      const apiUrl = `${window.location.href}movieid/${id}`;
-      fetch(apiUrl).then((data) => console.log(data));
-    });
-  })
   .catch((err) => console.error(err));

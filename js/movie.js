@@ -15,11 +15,11 @@ export function addMovie(movie) {
     <div class="movie-card__overview">${movie.overview}</div>
     <div class="movie-card__vote-average">Ratings : ${movie.vote_average}</div>
   </div>`;
-  div.addEventListener("click", () => {
-    const url =
-      window.location.href.split("#")[0] + "movie.html?id=" + movie.id;
-    window.location.href = url;
-  });
+  // div.addEventListener("click", () => {
+  //   const url =
+  //     window.location.href.split("#")[0] + "movie.html?id=" + movie.id;
+  //   window.location.href = url;
+  // });
   div.id = movie.id;
   movieCards.append(div);
 }
