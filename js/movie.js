@@ -7,9 +7,8 @@ export function addMovie(movie) {
   const div = document.createElement("div");
   div.classList.add("movie-card");
 
-  div.innerHTML = `
-  <a href="movie.html?id=${movie.id}" />
-  <div class="movie-card__poster">
+  div.innerHTML = `<div class="movie-card__poster">
+  <a href='movie.html?id=${movie.id}'>
     <img src=${base_url}${file_size}${file_path} /></div>
   <div class="movie-card__content">
     <div class="movie-card__title">${movie.title}</div>
