@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="js/api.js" type="module"></script>
-    <title>혜원이의 최고 평점 영화 콜렉션</title>
-  </head>
-  <body>
-    <div class="title">
-      <span class="title__text">🍿 혜원이의 최고 평점 영화 콜렉션 🍿</span>
-    </div>
-    <div class="search">
-      <form class="search__form">
-        <label>영화 검색 :</label>
-        <input
-          id="search__value"
-          type="text"
-          placeholder="영화 제목을 검색해 보세요"
-          autofocus
-        />
-        <button class="search__btn">검색</button>
-      </form>
-    </div>
-    <div class="movie-cards">
-      <!-- <div class="movie-card">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/api.js" type="module"></script>
+  <script src="js/movie.js" type="module"></script>
+  <script src="js/topbtn.js" type="module"></script>
+  <title>혜원이의 최고 평점 영화 콜렉션</title>
+</head>
+
+<body>
+  <div class="title">
+    <span class="title__text">🍿 혜원이의 최고 평점 영화 콜렉션 🍿</span>
+  </div>
+  <div class="search">
+    <form class="search__form">
+      <label>영화 검색 :</label>
+      <input id="search__value" type="text" placeholder="영화 제목을 검색해 보세요" autofocus />
+      <button class="search__btn">검색</button>
+    </form>
+  </div>
+  <div class="movie-cards">
+    <!-- <div class="movie-card">
         <div class="movie-card__poster">
           <img src="#" />
         </div>
@@ -39,7 +38,10 @@
           <div class="movie-card__vote-average">평점</div>
         </div> 
       </div> -->
-    </div>
-    <footer>COPYRIGHT&copy; Hyewon Movies All rights reserved.</footer>
-  </body>
+  </div>
+  <div class="noMovie"></div>
+
+  <footer>COPYRIGHT&copy; Hyewon Movies All rights reserved.</footer>
+</body>
+
 </html>
