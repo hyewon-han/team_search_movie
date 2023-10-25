@@ -65,3 +65,9 @@ async function fetchMovieContent() {
   const data = await response.json();
   return data;
 }
+
+// function handleOnInput(el, maxlength) {
+//   if (el.value.length > maxlength) {
+//     el.value = el.value.substr(0, maxlength);
+//   }
+// }
