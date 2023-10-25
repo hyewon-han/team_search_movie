@@ -15,5 +15,6 @@ export function addMovie(movie) {
     <div class="movie-card__overview">${movie.overview}</div>
     <div class="movie-card__vote-average">Ratings : ${movie.vote_average}</div>
   </div>`;
+
   movieCards.append(div);
 }
