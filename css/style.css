@@ -25,11 +25,36 @@ img {
 .title {
   background-color: var(--brown);
   display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100px;
 }
 .title__text {
   font-size: 32px;
   font-weight: 1000;
+  margin-left: 20px;
+}
+
+.ratingBtn {
+  background-color: transparent;
+  font-size: 32px;
+  font-weight: 1000;
+  margin-left: 20px;
+}
+
+.nameBtn {
+  background-color: transparent;
+  font-size: 32px;
+  font-weight: 1000;
+  margin-left: 20px;
+}
+
+.dateBtn {
+  background-color: transparent;
+  font-size: 32px;
+  font-weight: 1000;
+  margin-left: 20px;
+}
+
+.arrayBtn {
+  justify-content: flex-end;
+  width: max-content;
 }
