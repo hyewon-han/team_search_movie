@@ -7,15 +7,17 @@ export function searchMovie() {
 
   function handleSearch(e) {
     e.preventDefault();
-    let value = searchValue.value.toLowerCase();
+    let searchedValue = searchValue.value.toLowerCase();
 
-    movieCard.forEach((element) => {
-      element.classList.remove("hidden");
-      let movieTitle =
-        element.childNodes[2].childNodes[1].innerText.toLowerCase();
+    movieCard.forEach((card) => {
+      const title = card
+        .querySelector(".movie-card__title")
+        .textContent.toLowerCase();
 
-      if (!movieTitle.includes(value)) {
-        element.classList.add("hidden");
+      card.classList.remove("hidden");
+      // let movieTitle = card.childNodes[2].childNodes[1].innerText.toLowerCase();
+      if (!title.includes(searchedValue)) {
+        card.classList.add("hidden");
       }
     });
   }
