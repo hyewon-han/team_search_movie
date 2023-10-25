@@ -1,0 +1,22 @@
+.review__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: turquoise;
+}
+
+.review__info {
+  background-color: gray;
+}
+
+.review__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.review__textarea {
+  width: 100%;
+  height: 6.25em;
+  border: none;
+  resize: none;
+}

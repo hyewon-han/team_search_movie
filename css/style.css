@@ -3,6 +3,7 @@
 @import "variables.css";
 @import "movie-card.css";
 @import "search.css";
+@import "review.css";
 
 body {
   font-family: "Nanum Gothic", sans-serif;

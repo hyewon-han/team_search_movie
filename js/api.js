@@ -16,6 +16,7 @@ fetch(
 )
   .then((response) => response.json())
   .then((response) => {
+    console.log(response);
     const result = response.results;
     result.forEach((movie) => {
       addMovie(movie);
