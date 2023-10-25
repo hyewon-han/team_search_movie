@@ -1,6 +1,5 @@
 const URLSearch = new URLSearchParams(location.search);
 let id = URLSearch.get("id");
-console.log(URLSearch.get("id"));
 
 async function generateMovieContent() {
   const movie = await fetchMovieContent();
@@ -30,6 +29,5 @@ async function fetchMovieContent() {
     options
   );
   const data = await response.json();
-  console.log(data);
   return data;
 }

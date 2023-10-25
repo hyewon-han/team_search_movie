@@ -7,6 +7,7 @@ export function searchMovie() {
 
   function handleSearch(e) {
     e.preventDefault();
+    const searchMovieList = [];
     let searchedValue = searchValue.value.toLowerCase();
 
     movieCard.forEach((card) => {
@@ -14,12 +15,16 @@ export function searchMovie() {
         .querySelector(".movie-card__title")
         .textContent.toLowerCase();
 
-      card.classList.remove("hidden");
-      // let movieTitle = card.childNodes[2].childNodes[1].innerText.toLowerCase();
-      if (!title.includes(searchedValue)) {
-        card.classList.add("hidden");
+      if (title.includes(searchedValue)) {
+        card.style.display = "block";
+        searchMovieList.push(title);
+      } else {
+        card.style.display = "none";
       }
     });
+    if (searchMovieList.length == 0) {
+      alert("검색 결과가 없습니다.");
+    }
   }
   searchBtn.addEventListener("click", handleSearch);
 }
