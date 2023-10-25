@@ -1,4 +1,5 @@
 const movieCards = document.querySelector(".movie-cards");
+const moveTop_btn = document.querySelector(".moveTop");
 
 export function addMovie(movie) {
   const base_url = "https://image.tmdb.org/";
@@ -22,3 +23,19 @@ export function addMovie(movie) {
   div.id = movie.id;
   movieCards.append(div);
 }
+
+function showTopBtn() {
+  if (window.scrollY >= 417) moveTop_btn.style.visibility = "visible";
+  else moveTop_btn.style.visibility = "hidden";
+}
+
+function moveTop() {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+}
+
+window.addEventListener("scroll", showTopBtn);
+moveTop_btn.addEventListener("click", moveTop);
