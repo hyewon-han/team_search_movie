@@ -12,8 +12,9 @@ body.dark-mode {
 #darkModeToggle {
   background-color: black;
   color: white;
-  padding: 10px 20px;
-  border-radius: 4px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
 }
 .nexthome {
   font-weight: 300;

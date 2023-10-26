@@ -28,6 +28,9 @@ footer {
   align-items: center;
   height: 100px;
   border-bottom: 2px solid red;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 }
 
 .title__text {

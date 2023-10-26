@@ -1,13 +1,12 @@
 const URLSearch = new URLSearchParams(location.search);
 let id = URLSearch.get("id");
 
-const poster = document.querySelector('.movie-poster')
-const title = document.querySelector('.movie-title')
-const tagline = document.querySelector('.movie-tagline')
-const inner = document.querySelectorAll('p')
-const inneContent = Array.from(inner)//nodelist를 array로
-const overview = document.querySelector('.movie-overview')
-
+const poster = document.querySelector(".movie-poster");
+const title = document.querySelector(".movie-title");
+const tagline = document.querySelector(".movie-tagline");
+const inner = document.querySelectorAll("p");
+const inneContent = Array.from(inner); //nodelist를 array로
+const overview = document.querySelector(".movie-overview");
 
 async function generateMovieContent() {
   const movie = await fetchMovieContent();
@@ -15,25 +14,24 @@ async function generateMovieContent() {
   document.title = `2GV | ${movie.title}`;
   poster.innerHTML = `<img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="...">`;
 
-  poster.innerHTML = `<img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" class="poster" alt="...">`
+  poster.innerHTML = `<img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" class="poster" alt="...">`;
 
-  title.innerText = movie.title
-  tagline.innerText = movie.tagline
-  inneContent[1].innerText = movie.release_date
-
+  title.innerText = movie.title;
+  tagline.innerText = movie.tagline;
+  inneContent[1].innerText = movie.release_date;
 
   const genres = [];
   movie.genres.forEach((a) => {
     return genres.push(a.name);
   });
-  console.log(genres)
-  inneContent[3].innerText = genres
-  inneContent[5].innerText = `${movie.runtime} Minutes`
-  inneContent[7].innerText = movie.vote_average
-  inneContent[9].innerText = movie.production_countries[0].name
-  inneContent[11].innerText = movie.spoken_languages[0].english_name
+  console.log(genres);
+  inneContent[3].innerText = genres;
+  inneContent[5].innerText = `${movie.runtime} Minutes`;
+  inneContent[7].innerText = movie.vote_average;
+  inneContent[9].innerText = movie.production_countries[0].name;
+  inneContent[11].innerText = movie.spoken_languages[0].english_name;
 
-  overview.innerText = movie.overview
+  overview.innerText = movie.overview;
 }
 
 generateMovieContent();
