@@ -1,7 +1,6 @@
 #homeButton {
   background-color: var(--green);
   color: black;
-  padding: 10px 20px;
   border-radius: 4px;
 }
 
@@ -11,9 +10,15 @@ body.dark-mode {
 }
 
 #darkModeToggle {
-  background-color: red;
-  color: #fff;
+  background-color: black;
+  color: white;
   padding: 10px 20px;
   border-radius: 4px;
-
+}
+.nexthome {
+  font-weight: 300;
+  font-size: 16px;
+  color: #222;
+  letter-spacing: 0.313em;
+  line-height: 1.5em;
 }
