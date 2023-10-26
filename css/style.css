@@ -4,6 +4,7 @@
 @import "movie-card.css";
 @import "search.css";
 @import "topbtn.css";
+@import "detail.css";
 
 body {
   font-family: "Nanum Gothic", sans-serif;
@@ -30,6 +31,7 @@ img {
   align-items: center;
   height: 100px;
 }
+
 .title__text {
   font-size: 32px;
   font-weight: 1000;

@@ -5,14 +5,14 @@ const poster = document.querySelector('.movie-poster')
 const title = document.querySelector('.movie-title')
 const tagline = document.querySelector('.movie-tagline')
 const inner = document.querySelectorAll('dt')
-const inneContent = Array.from(inner)
+const inneContent = Array.from(inner)//nodelist를 array로
 const overview = document.querySelector('.movie-overview')
 
 
 async function generateMovieContent() {
   const movie = await fetchMovieContent();
 
-  poster.innerHTML = `<img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="...">`
+  poster.innerHTML = `<img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" class="poster" alt="...">`
 
   title.innerText = movie.title
   tagline.innerText = movie.tagline
@@ -24,27 +24,12 @@ async function generateMovieContent() {
   });
   console.log(genres)
   inneContent[3].innerText = genres
-
-
   inneContent[5].innerText = `${movie.runtime} Minutes`
   inneContent[7].innerText = movie.vote_average
   inneContent[9].innerText = movie.production_countries[0].name
   inneContent[11].innerText = movie.spoken_languages[0].english_name
 
   overview.innerText = movie.overview
-
-
-
-  // console.log(movie);
-  // console.log(movie.popularity);
-  // console.log(movie.vote_average);
-  // console.log(movie.spoken_languages[0].english_name);
-  // console.log(movie.runtime);
-  // console.log(movie.production_countries[0].name);
-  // console.log(movie.tagline);
-  // console.log(movie.release_date);
-  // console.log(movie.title);
-  // console.log(movie.genres);
 }
 
 generateMovieContent();
