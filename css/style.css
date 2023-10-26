@@ -3,6 +3,7 @@
 @import "variables.css";
 @import "movie-card.css";
 @import "search.css";
+@import "btns.css";
 
 body {
   font-family: "Nanum Gothic", sans-serif;
@@ -23,13 +24,15 @@ img {
 }
 
 .title {
+  padding-left: 100px;
   background-color: var(--brown);
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 100px;
 }
 .title__text {
+  padding-left: 520px;
   font-size: 32px;
   font-weight: 1000;
 }
