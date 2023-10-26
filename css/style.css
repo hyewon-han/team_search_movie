@@ -5,6 +5,7 @@
 @import "search.css";
 @import "review.css";
 @import "topbtn.css";
+@import "detail.css";
 
 body {
   font-family: "Nanum Gothic", sans-serif;
@@ -16,12 +17,6 @@ footer {
   display: flex;
   justify-content: center;
   padding: 50px;
-}
-
-img {
-  width: 260px;
-  height: 390px;
-  border-radius: 10px;
 }
 
 .title {

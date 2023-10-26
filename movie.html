@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="./css/detail.css" />
     <title>상세페이지</title>
     <script src="js/content.js" type="module"></script>
     <script src="js/review.js" type="module"></script>
@@ -86,11 +85,28 @@
             placeholder="내용을 입력해 주세요."
             cols="40"
             rows="10"
-            minlength="10"
+            minlength="5"
           ></textarea>
-          <input type="submit" class="form-submit btn" value="등록" />
+          <input type="submit" class="review__submitbtn" value="등록" />
         </div>
       </form>
+      <ul id="review__lists">
+        <li class="review__list">
+          <div>
+            <span>이름</span>
+            <span>⭐️⭐️⭐️</span>
+          </div>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Perspiciatis obcaecati inventore laborum nulla velit. Impedit
+            repudiandae voluptatum officiis sint nobis optio pariatur hic maxime
+            itaque accusamus! Numquam dignissimos consequuntur quos.
+          </p>
+          <div>
+            <button>삭제</button>
+          </div>
+        </li>
+      </ul>
     </div>
   </body>
 </html>
