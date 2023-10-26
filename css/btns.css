@@ -16,10 +16,31 @@ body.dark-mode {
   height: 90px;
   border-radius: 50%;
 }
+
 .nexthome {
   font-weight: 300;
   font-size: 16px;
   color: #222;
   letter-spacing: 0.313em;
   line-height: 1.5em;
+}
+
+
+#homeButton {
+  position: absolute;
+  left: 1%;
+  height: 80px;
+  width: 100px;
+
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+
+#darkModeToggle {
+  position: absolute;
+  height: 80px;
+
+  right: 1%;
+  top: 1%
 }
