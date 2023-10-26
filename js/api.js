@@ -21,3 +21,11 @@ fetch("https://api.themoviedb.org/3/movie/popular?language=ko&page=1", options)
   })
   .then(searchMovie)
   .catch((err) => console.error(err));
+
+//다크모드
+const darkModeToggle = document.getElementById("darkModeToggle");
+
+darkModeToggle.addEventListener("click", function () {
+  document.body.classList.toggle("dark-mode");
+});
+//다크모드
