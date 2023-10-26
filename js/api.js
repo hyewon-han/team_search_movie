@@ -1,5 +1,6 @@
 import { searchMovie } from "./search.js";
 import { addMovie } from "./movie.js";
+import { sortMovie } from "./sort.js";
 
 const options = {
   method: "GET",
@@ -10,7 +11,7 @@ const options = {
   },
 };
 
-fetch("https://api.themoviedb.org/3/movie/popular?language=ko&page=1", options)
+fetch("https://api.themoviedb.org/3/movie/popular?language=en-US&page=1", options)
   .then((response) => response.json())
   .then((response) => {
     console.log(response);
@@ -20,4 +21,5 @@ fetch("https://api.themoviedb.org/3/movie/popular?language=ko&page=1", options)
     });
   })
   .then(searchMovie)
+  .then(sortMovie)
   .catch((err) => console.error(err));
