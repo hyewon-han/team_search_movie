@@ -1,9 +1,23 @@
+.detail-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 header {
     height: 200px;
+    background-color: chartreuse;
+    width: 100%;
+}
+
+header>div {
+    height: 200px;
+    background-color: red;
 }
 
 .movie-content {
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .movie-content-top {
@@ -60,6 +74,11 @@ header {
     background-color: black;
     width: 300px;
     height: 350px;
+
+
+    list-style: none;
+    padding-left: 0px;
+
 }
 
 .inner-content {
@@ -69,6 +88,11 @@ header {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    margin: 10px;
+    text-align: center;
+    /*위아래 가운데로 어케보내냐*/
+
 }
 
 .movie-overview {

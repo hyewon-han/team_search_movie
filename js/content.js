@@ -4,7 +4,7 @@ let id = URLSearch.get("id");
 const poster = document.querySelector('.movie-poster')
 const title = document.querySelector('.movie-title')
 const tagline = document.querySelector('.movie-tagline')
-const inner = document.querySelectorAll('dt')
+const inner = document.querySelectorAll('p')
 const inneContent = Array.from(inner)//nodelist를 array로
 const overview = document.querySelector('.movie-overview')
 
