@@ -14,3 +14,9 @@ myButton.addEventListener("click", function () {
     myButton.style.color = "black";
   }
 });
+
+const darkModeToggle = document.getElementById("darkModeToggle");
+
+darkModeToggle.addEventListener("click", function () {
+  document.body.classList.toggle("dark-mode");
+});
