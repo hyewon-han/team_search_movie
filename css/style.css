@@ -4,6 +4,7 @@
 @import "movie-card.css";
 @import "search.css";
 @import "btns.css";
+@import "topbtn.css";
 
 body {
   font-family: "Nanum Gothic", sans-serif;
