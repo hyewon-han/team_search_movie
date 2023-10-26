@@ -21,6 +21,12 @@
   justify-content: center;
 }
 
+.movie-card__poster img {
+  width: 260px;
+  height: 390px;
+  border-radius: 10px;
+}
+
 .movie-card__content {
   margin: 0px 20px;
 }
@@ -52,4 +58,10 @@
 
 .movie-card__overview:hover {
   opacity: 1;
+}
+
+.noMovie {
+  display: flex;
+  justify-content: center;
+  margin: 100px;
 }

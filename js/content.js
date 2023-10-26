@@ -1,39 +1,36 @@
 const URLSearch = new URLSearchParams(location.search);
 let id = URLSearch.get("id");
 
-const poster = document.querySelector('.movie-poster')
-const title = document.querySelector('.movie-title')
-const tagline = document.querySelector('.movie-tagline')
-const inner = document.querySelectorAll('dt')
-const inneContent = Array.from(inner)
-const overview = document.querySelector('.movie-overview')
-
+const poster = document.querySelector(".movie-poster");
+const title = document.querySelector(".movie-title");
+const tagline = document.querySelector(".movie-tagline");
+const inner = document.querySelectorAll("dt");
+const inneContent = Array.from(inner);
+const overview = document.querySelector(".movie-overview");
 
 async function generateMovieContent() {
   const movie = await fetchMovieContent();
+  console.log(movie);
+  document.title = `2GV | ${movie.title}`;
+  poster.innerHTML = `<img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="...">`;
 
-  poster.innerHTML = `<img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="...">`
-
-  title.innerText = movie.title
-  tagline.innerText = movie.tagline
-  inneContent[1].innerText = movie.release_date
+  title.innerText = movie.title;
+  tagline.innerText = movie.tagline;
+  inneContent[1].innerText = movie.release_date;
 
   const genres = [];
-  movie.genres.forEach(a => {
-    return genres.push(a.name)
+  movie.genres.forEach((a) => {
+    return genres.push(a.name);
   });
-  console.log(genres)
-  inneContent[3].innerText = genres
+  console.log(genres);
+  inneContent[3].innerText = genres;
 
+  inneContent[5].innerText = `${movie.runtime} Minutes`;
+  inneContent[7].innerText = movie.vote_average;
+  inneContent[9].innerText = movie.production_countries[0].name;
+  inneContent[11].innerText = movie.spoken_languages[0].english_name;
 
-  inneContent[5].innerText = `${movie.runtime} Minutes`
-  inneContent[7].innerText = movie.vote_average
-  inneContent[9].innerText = movie.production_countries[0].name
-  inneContent[11].innerText = movie.spoken_languages[0].english_name
-
-  overview.innerText = movie.overview
-
-
+  overview.innerText = movie.overview;
 
   // console.log(movie);
   // console.log(movie.popularity);
@@ -59,7 +56,7 @@ async function fetchMovieContent() {
     },
   };
   const response = await fetch(
-    `https://api.themoviedb.org/3/movie/${id}?language=en-US`,
+    `https://api.themoviedb.org/3/movie/${id}?language=ko`,
     options
   );
   const data = await response.json();
