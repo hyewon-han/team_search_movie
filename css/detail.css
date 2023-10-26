@@ -94,11 +94,6 @@
   margin: 10px;
   text-align: center;
   align-items: center;
-
-  margin: 10px;
-  text-align: center;
-  align-items: center;
-  /*위아래 가운데로 어케보내냐*/
 }
 
 .movie-overview {
@@ -115,4 +110,4 @@
 }
 
 /* padding-left: 5%;
-    padding-right: 5%; */
+  padding-right: 5%; */
