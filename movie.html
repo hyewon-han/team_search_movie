@@ -1,63 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="asset/favicon.ico" />
+    <title></title>
+    <script src="js/content.js" type="module"></script>
+    <script src="js/review.js" type="module"></script>
+  </head>
+  <body>
+    <header>머리머리머리</header>
+    <main class="movie-content">
+      <div class="movie-content-top">
+        <figure class="movie-poster">포스터입니다</figure>
+        <div class="movie-detail">
+          <div class="movie-title">타이틀입니다</div>
+          <div class="movie-tagline">한줄평입니다</div>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>상세페이지</title>
-  <script src="js/content.js" type="module"></script>
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/detail.css">
-</head>
-
-<body>
-  <header>머리머리머리</header>
-  <main class="movie-content">
-    <div class="movie-content-top">
-      <figure class="movie-poster">포스터입니다</figure>
-      <div class="movie-detail">
-        <div class="movie-title">
-          타이틀입니다
-        </div>
-        <div class="movie-tagline">한줄평입니다</div>
-
-        <div class="movie-info">
-          <div class="detail-inner">
-            <dl class="inner-content">
-              <dt>Release Date</dt>
-              <dt>1234</dt>
-            </dl>
-            <dl class="inner-content">
-              <dt>Genre</dt>
-              <dt>무서워</dt>
-            </dl>
-            <dl class="inner-content">
-              <dt>🎦</dt>
-              <dt>겁나김</dt>
-            </dl>
-          </div>
-          <div class="detail-inner">
-            <dl class="inner-content">
-              <dt>⭐</dt>
-              <dt>꿀잼</dt>
-            </dl>
-            <dl class="inner-content">
-              <dt>country</dt>
-              <dt>북한</dt>
-            </dl>
-            <dl class="inner-content">
-              <dt>Language</dt>
-              <dt>조선말</dt>
-            </dl>
-
+          <div class="movie-info">
+            <div class="detail-inner">
+              <dl class="inner-content">
+                <dt>Release Date</dt>
+                <dt>1234</dt>
+              </dl>
+              <dl class="inner-content">
+                <dt>Genre</dt>
+                <dt>무서워</dt>
+              </dl>
+              <dl class="inner-content">
+                <dt>🎦</dt>
+                <dt>겁나김</dt>
+              </dl>
+            </div>
+            <div class="detail-inner">
+              <dl class="inner-content">
+                <dt>⭐</dt>
+                <dt>꿀잼</dt>
+              </dl>
+              <dl class="inner-content">
+                <dt>country</dt>
+                <dt>북한</dt>
+              </dl>
+              <dl class="inner-content">
+                <dt>Language</dt>
+                <dt>조선말</dt>
+              </dl>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="movie-overview">
-      스토리입니다
-    </div>
-  </main>
-</body>
+      <div class="movie-overview">스토리입니다</div>
+    </main>
+    <div class="review">
+      <div class="review__wrap">
+        <form class="review__form">
+          <div class="review__info">
+            <label class="review__label">이름: </label>
+            <input
+              type="text"
+              class="review__username"
+              placeholder="이름을 입력해주세요"
+              minlength="1"
+              required
+            />
+            <label class="review__label">비밀번호: </label>
+            <input
+              type="password"
+              class="review__password"
+              placeholder="비밀번호 (4자 이상)"
+              minlength="4"
+              required
+            />
+            <label class="review__label">별점: </label>
+            <select class="review__star" id="star" required>
+              <option selected value="">별점 선택</option>
+              <option value="⭐️">⭐️</option>
+              <option value="⭐️⭐️">⭐️⭐️</option>
+              <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
+              <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
+              <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
+            </select>
+          </div>
+          <div class="review__content">
+            <label class="review__label">리뷰</label>
+            <textarea
+              class="review__textarea"
+              placeholder="내용을 입력해 주세요."
+              cols="40"
+              rows="10"
+              minlength="5"
+              required
+            ></textarea>
+            <input type="submit" class="review__submitbtn" value="등록" />
+          </div>
+        </form>
+      </div>
 
+      <ul id="review__lists">
+        <li class="review__list">
+          <div>
+            <span>이름</span>
+            <span>⭐️⭐️⭐️</span>
+          </div>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Perspiciatis obcaecati inventore laborum nulla velit. Impedit
+            repudiandae voluptatum officiis sint nobis optio pariatur hic maxime
+            itaque accusamus! Numquam dignissimos consequuntur quos.
+          </p>
+          <div>
+            <button>삭제</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
 </html>

@@ -10,12 +10,10 @@ const options = {
   },
 };
 
-fetch(
-  "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1",
-  options
-)
+fetch("https://api.themoviedb.org/3/movie/popular?language=ko&page=1", options)
   .then((response) => response.json())
   .then((response) => {
+    console.log(response);
     const result = response.results;
     result.forEach((movie) => {
       addMovie(movie);

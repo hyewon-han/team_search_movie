@@ -9,8 +9,8 @@ body.dark-mode {
   background-color: #222;
   color: #fff;
 }
+
 #darkModeToggle {
-  margin-left: 500px;
   background-color: red;
   color: #fff;
   padding: 10px 20px;
