@@ -22,12 +22,12 @@ img {
   border-radius: 10px;
 }
 
-.title {
+.topNav {
   background-color: var(--brown);
   display: flex;
   height: 100px;
 }
-.title__text {
+.homeBtn {
   font-size: 32px;
   font-weight: 1000;
   margin-left: 20px;
