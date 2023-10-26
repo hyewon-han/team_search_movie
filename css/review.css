@@ -1,3 +1,7 @@
+.review {
+  width: 95%;
+}
+
 .review__wrap {
   display: flex;
   flex-direction: column;
