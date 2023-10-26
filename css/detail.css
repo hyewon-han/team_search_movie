@@ -3,19 +3,22 @@
     flex-direction: column;
     align-items: center;
 
+    background-color: white;
+
 }
 
 header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
 
     height: 100px;
     background-color: chartreuse;
     width: 100%;
+}
 
-
+h1 {
+    height: 100px;
 }
 
 #homeButton {
@@ -28,18 +31,6 @@ header {
     font-size: 1.5rem;
 }
 
-.movie-title {
-    height: 100px;
-    background-color: aqua;
-
-
-    font-size: 2.3rem;
-    text-align: center;
-    vertical-align: baseline;
-
-
-    /*작동안해*/
-}
 
 #darkModeToggle {
     position: absolute;
@@ -56,43 +47,67 @@ header {
 }
 
 .movie-content-top {
-    background-color: wheat;
+    /* background-color: wheat; */
     width: 1600px;
     height: 800px;
 
     display: flex;
     flex-direction: row;
-
+    justify-content: center;
     margin-top: 50px;
 }
 
 .poster {
+
+    border: thick double black;
+    border-radius: 5px;
+
     width: 500px;
     height: 700px;
-    background-color: gold;
 }
 
 .movie-detail {
-    width: 1100px;
+    width: 900px;
     height: 700px;
-    background-color: green;
+    /* background-color: green; */
 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.movie-title {
+    margin: 50px 0 60px 0;
+
+    height: 100px;
+    /* background-color: aqua; */
+
+
+    font-size: 5rem;
+    text-align: center;
+
+
+    /*작동안해*/
+}
+
 .movie-tagline {
     width: 1000px;
     height: 100px;
-    background-color: aquamarine;
-    font-size: 2rem;
+    /* background-color: aquamarine; */
+
+    font-size: 2.5rem;
+    line-height: 3rem;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 6px;
+
+
 }
 
 .movie-info {
     width: 1000px;
-    height: 600px;
-    background-color: blueviolet;
+    height: 400px;
+    /* background-color: blueviolet; */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -100,20 +115,28 @@ header {
 }
 
 .detail-inner {
-    background-color: black;
-    width: 300px;
-    height: 350px;
+    /* background-color: black; */
+    width: 420px;
+    height: 300px;
 
 
     list-style: none;
     padding-left: 0px;
 
+    display: grid;
+
+}
+
+.inner-content>p {
+    font-size: 1.3rem;
 }
 
 .inner-content {
-    background-color: chocolate;
-    width: 280px;
-    height: 100px;
+
+    border: thick double black;
+    border-radius: 10px;
+    width: 400px;
+    height: 80px;
 
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -121,16 +144,22 @@ header {
     margin: 10px;
     text-align: center;
     align-items: center;
-    /*위아래 가운데로 어케보내냐*/
 
 }
 
 .movie-overview {
     width: 1200px;
     height: 500px;
-    background-color: yellow;
+    /* background-color: yellow; */
+
+    border: thick double black;
+
+    border-radius: 10px;
 
     font-size: 1.5rem;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 50px;
+
 }
+
+/* padding-left: 5%;
+    padding-right: 5%; */
