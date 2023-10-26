@@ -21,15 +21,13 @@ footer {
 }
 
 .title {
-  padding-left: 100px;
   background-color: var(--brown);
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   height: 100px;
 }
 .title__text {
-  padding-left: 520px;
   font-size: 32px;
   font-weight: 1000;
 }
