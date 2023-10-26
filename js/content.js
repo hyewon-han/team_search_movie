@@ -11,6 +11,7 @@ const overview = document.querySelector(".movie-overview");
 async function generateMovieContent() {
   const movie = await fetchMovieContent();
   console.log(movie);
+  document.title = `2GV | ${movie.title}`;
   poster.innerHTML = `<img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="...">`;
 
   title.innerText = movie.title;

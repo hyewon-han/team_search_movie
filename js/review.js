@@ -34,7 +34,7 @@ function submitReview(e) {
 }
 
 reviewForm.addEventListener("submit", submitReview);
-//reviewSubmitBtn.addEventListener("click", handleReviewForm);
+//reviewSubmitBtn.addEventListener("click", submitReview);
 
 function paintReview(reviewObj) {
   const li = document.createElement("li");
@@ -62,3 +62,12 @@ if (saveReviews !== null) {
   console.log(parsedReviews);
   parsedReviews.filter((obj) => obj.movieid == id).forEach(paintReview);
 }
+
+function handleTextareaEnter(e) {
+  if (e.key == "Enter") {
+    console.log(e);
+    reviewSubmitBtn.click();
+  }
+}
+
+reviewTextarea.addEventListener("keyup", handleTextareaEnter);
