@@ -3,6 +3,7 @@
 @import "variables.css";
 @import "movie-card.css";
 @import "search.css";
+@import "review.css";
 @import "btns.css";
 @import "topbtn.css";
 @import "detail.css";
@@ -19,23 +20,15 @@ footer {
   padding: 50px;
 }
 
-img {
-  width: 260px;
-  height: 390px;
-  border-radius: 10px;
-}
-
 .title {
-  padding-left: 100px;
   background-color: var(--brown);
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   height: 100px;
 }
 
 .title__text {
-  padding-left: 520px;
   font-size: 32px;
   font-weight: 1000;
 }

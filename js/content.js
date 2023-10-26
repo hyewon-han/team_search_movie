@@ -11,6 +11,9 @@ const overview = document.querySelector('.movie-overview')
 
 async function generateMovieContent() {
   const movie = await fetchMovieContent();
+  console.log(movie);
+  document.title = `2GV | ${movie.title}`;
+  poster.innerHTML = `<img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="...">`;
 
   poster.innerHTML = `<img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" class="poster" alt="...">`
 
@@ -18,9 +21,10 @@ async function generateMovieContent() {
   tagline.innerText = movie.tagline
   inneContent[1].innerText = movie.release_date
 
+
   const genres = [];
-  movie.genres.forEach(a => {
-    return genres.push(a.name)
+  movie.genres.forEach((a) => {
+    return genres.push(a.name);
   });
   console.log(genres)
   inneContent[3].innerText = genres
@@ -44,7 +48,7 @@ async function fetchMovieContent() {
     },
   };
   const response = await fetch(
-    `https://api.themoviedb.org/3/movie/${id}?language=en-US`,
+    `https://api.themoviedb.org/3/movie/${id}?language=ko`,
     options
   );
   const data = await response.json();
