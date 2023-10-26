@@ -3,7 +3,10 @@
 @import "variables.css";
 @import "movie-card.css";
 @import "search.css";
+@import "review.css";
+@import "btns.css";
 @import "topbtn.css";
+@import "detail.css";
 
 body {
   font-family: "Nanum Gothic", sans-serif;
@@ -17,16 +20,10 @@ footer {
   padding: 50px;
 }
 
-img {
-  width: 260px;
-  height: 390px;
-  border-radius: 10px;
-}
-
 .title {
   background-color: var(--brown);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 100px;
 }

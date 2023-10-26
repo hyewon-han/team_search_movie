@@ -1,0 +1,62 @@
+.review__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: turquoise;
+  border-radius: 20px;
+  margin: 20px;
+  width: 700px;
+  height: 300px;
+}
+
+.review__info {
+  margin: 20px;
+}
+
+.review__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.review__textarea {
+  border: none;
+  resize: none;
+  width: 500px;
+  height: 150px;
+}
+
+#review__lists {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  place-items: center;
+}
+
+.review__list {
+  background-color: var(--yellow);
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.review__list div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.review__list p {
+  margin: 20px;
+}
+
+.review__list button {
+  display: flex;
+  justify-content: center;
+}
