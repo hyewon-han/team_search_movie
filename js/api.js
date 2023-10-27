@@ -1,6 +1,6 @@
+import { sortMovie } from "./sort.js";
 import { searchMovie } from "./search.js";
 import { addMovie } from "./movie.js";
-import { sortMovie } from "./sort.js";
 
 const options = {
   method: "GET",
@@ -18,16 +18,12 @@ fetch("https://api.themoviedb.org/3/movie/popular?language=en-US&page=1", option
     const result = response.results;
     result.forEach((movie) => {
       addMovie(movie);
+      // sortMovie(movie)
     });
   })
   .then(searchMovie)
-  .then(sortMovie)
+  // .then((response) => {
+  //   console.log(response) =  undefiend
+  // }) 
   .catch((err) => console.error(err));
 
-//다크모드
-const darkModeToggle = document.getElementById("darkModeToggle");
-
-darkModeToggle.addEventListener("click", function () {
-  document.body.classList.toggle("dark-mode");
-});
-//다크모드
