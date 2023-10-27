@@ -26,4 +26,3 @@ fetch("https://api.themoviedb.org/3/movie/popular?language=en-US&page=1", option
   //   console.log(response) =  undefiend
   // }) 
   .catch((err) => console.error(err));
-
