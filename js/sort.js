@@ -1,3 +1,5 @@
+
+
 const averageBtn = document.querySelector(".avgBtn");
 const movieCards = document.querySelector(".movie-cards");
 // export function sortMovie () {
@@ -26,7 +28,5 @@ export function sortMovie(result) {
   sortedMovieList.forEach(function (a) {
     console.log(a.vote_average);
   });
-  console.log(sortedMovieList);
-}
 
-averageBtn.addEventListener("click", sortMovie);
+}
