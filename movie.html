@@ -3,16 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>상세페이지</title>
-    <script src="js/content.js" type="module"></script>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image/x-icon" href="asset/favicon.ico" />
-
-    <title></title>
-    <script src="js/darkbtn.js" type="module"></script>
+    <script src="js/content.js" type="module"></script>
     <script src="js/review.js" type="module"></script>
+    <script src="js/darkbtn.js" type="module"></script>
+    <title></title>
   </head>
-
   <body class="detail-body">
     <header class="title">
       <a href="index.html" id="homeButton">
@@ -114,7 +111,7 @@
       </div>
 
       <ul id="review__lists">
-        <li class="review__list">
+        <!-- <li class="review__list">
           <div>
             <span>이름</span>
             <span>⭐️⭐️⭐️</span>
@@ -125,10 +122,21 @@
             repudiandae voluptatum officiis sint nobis optio pariatur hic maxime
             itaque accusamus! Numquam dignissimos consequuntur quos.
           </p>
-          <div>
-            <button>삭제</button>
+          <button class="modal__open-btn">모달</button>
+          <div class="hidden modal__container">
+            <div class="modal__content">
+              <input
+                type="password"
+                placeholder="비밀번호를 입력하세요"
+                required
+              />
+              <div>
+                <button class="modal__close-btn">취소</button>
+                <button class="modal__delete-btn">삭제</button>
+              </div>
+            </div>
           </div>
-        </li>
+        </li> -->
       </ul>
     </div>
   </body>
