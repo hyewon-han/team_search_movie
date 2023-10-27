@@ -1,12 +1,4 @@
-// export const sortMovie = function () {
-//     let unsortmovies = document.querySelectorAll('.movie-card__vote-average')
-//     unsortmovies = Array.from(unsortmovies)
-
-//     console.log(unsortmovies[0].textContent.slice(10, 14))
-
-// }
-
-const averageBtn = document.querySelector(".ratingBtn");
+const averageBtn = document.querySelector(".avgBtn");
 
 export function sortMovie () {
     const sortMovies = document.querySelectorAll('.movie-card__vote-average');
@@ -20,7 +12,6 @@ export function sortMovie () {
             sortedMovieList.push(sortMovies.innerHTML.substring(10));
             sortedMovieList.sort((a, b) => b - a);
         })
-
         console.log(sortedMovieList);
     }
     averageBtn.addEventListener("click", handleSort);
