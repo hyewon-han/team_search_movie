@@ -19,9 +19,9 @@ fetch("https://api.themoviedb.org/3/movie/popular?language=en-US&page=1", option
     result.forEach((movie) => {
       addMovie(movie);
     });
+    sortMovie(response);
   })
   .then(searchMovie)
-  .then(sortMovie)
   .catch((err) => console.error(err));
 
 //다크모드
