@@ -1,5 +1,5 @@
-// const averageBtn = document.querySelector(".avgBtn");
-
+const averageBtn = document.querySelector(".avgBtn");
+const movieCards = document.querySelector(".movie-cards");
 // export function sortMovie () {
 //     const sortMovies = document.querySelectorAll('.movie-card__vote-average');
 
@@ -17,6 +17,16 @@
 //     averageBtn.addEventListener("click", handleSort);
 // }
 
-export function sortMovie (a) {
-    console.log(a);
+export function sortMovie(result) {
+  let sortedMovieList = result.sort((a, b) => {
+    const averageA = a.vote_average;
+    const averageB = b.vote_average;
+    return averageB - averageA;
+  });
+  sortedMovieList.forEach(function (a) {
+    console.log(a.vote_average);
+  });
+  console.log(sortedMovieList);
 }
+
+averageBtn.addEventListener("click", sortMovie);

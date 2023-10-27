@@ -1,118 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="asset/favicon.ico" />
+    <script src="js/content.js" type="module"></script>
+    <script src="js/review.js" type="module"></script>
+    <script src="js/darkbtn.js" type="module"></script>
+    <title></title>
+  </head>
+  <body class="detail-body">
+    <header class="title">
+      <a href="index.html" id="homeButton">
+        <img
+          src="asset/logoRed.png"
+          alt="이미지 없음"
+          style="width: 200px; height: 100%"
+        />
+      </a>
+      <span class="nexthome">CULTUREPLEX</span>
+      <span class="title__text">🍿 혜원이의 최고 평점 영화 콜렉션 🍿</span>
+      <button id="darkModeToggle">🌜️ DARK</button>
+    </header>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>상세페이지</title>
-  <script src="js/content.js" type="module"></script>
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="icon" type="image/x-icon" href="asset/favicon.ico" />
+    <main class="movie-content">
+      <div class="movie-content-top">
+        <figure class="movie-poster">포스터입니다</figure>
+        <div class="movie-detail">
+          <h2 class="movie-title">타이틀입니다</h2>
+          <h3 class="movie-tagline">한줄평입니다</h3>
 
-  <title></title>
-  <script src="js/content.js" type="module"></script>
-  <script src="js/review.js" type="module"></script>
-</head>
-
-<body class="detail-body">
-  <header class="title">
-    <a href="index.html" id="homeButton">
-      <img src="asset/logoRed.png" alt="이미지 없음" style="width: 200px; height: 100%" />
-    </a>
-    <span class="nexthome">CULTUREPLEX</span>
-    <span class="title__text">🍿 혜원이의 최고 평점 영화 콜렉션 🍿</span>
-    <button id="darkModeToggle">🌜️ DARK</button>
-  </header>
-
-  <main class="movie-content">
-    <div class="movie-content-top">
-      <figure class="movie-poster">포스터입니다</figure>
-      <div class="movie-detail">
-        <h2 class="movie-title">타이틀입니다</h2>
-        <h3 class="movie-tagline">한줄평입니다</h3>
-
-        <div class="movie-info">
-          <ul class="detail-inner">
-            <li class="inner-content">
-              <p>Release Date <br>📽</p>
-              <p></p>
-            </li>
-            <li class="inner-content">
-              <p>Genre <br>🎞</p>
-              <p></p>
-            </li>
-            <li class="inner-content">
-              <p>Runtime <br>🎦</p>
-              <p>겁나김</p>
-            </li>
-          </ul>
-          <ul class="detail-inner">
-            <li class="inner-content">
-              <p>vote_average<br>⭐</p>
-              <p></p>
-            </li>
-            <li class="inner-content">
-              <p>country <br>🌏</p>
-              <p></p>
-            </li>
-            <li class="inner-content">
-              <p>Language <br>🔊</p>
-              <p></p>
-            </li>
-
-          </ul>
+          <div class="movie-info">
+            <ul class="detail-inner">
+              <li class="inner-content">
+                <p>Release Date <br />📽</p>
+                <p></p>
+              </li>
+              <li class="inner-content">
+                <p>Genre <br />🎞</p>
+                <p></p>
+              </li>
+              <li class="inner-content">
+                <p>Runtime <br />🎦</p>
+                <p>겁나김</p>
+              </li>
+            </ul>
+            <ul class="detail-inner">
+              <li class="inner-content">
+                <p>vote_average<br />⭐</p>
+                <p></p>
+              </li>
+              <li class="inner-content">
+                <p>country <br />🌏</p>
+                <p></p>
+              </li>
+              <li class="inner-content">
+                <p>Language <br />🔊</p>
+                <p></p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
+      <div class="movie-overview">스토리입니다</div>
+    </main>
+    <div class="review">
+      <div class="review__wrap">
+        <form class="review__form">
+          <div class="review__info">
+            <label class="review__label">이름: </label>
+            <input
+              type="text"
+              class="review__username"
+              placeholder="이름을 입력해주세요"
+              minlength="1"
+              required
+            />
+            <label class="review__label">비밀번호: </label>
+            <input
+              type="password"
+              class="review__password"
+              placeholder="비밀번호 (4자 이상)"
+              minlength="4"
+              required
+            />
+            <label class="review__label">별점: </label>
+            <select class="review__star" id="star" required>
+              <option selected value="">별점 선택</option>
+              <option value="⭐️">⭐️</option>
+              <option value="⭐️⭐️">⭐️⭐️</option>
+              <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
+              <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
+              <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
+            </select>
+          </div>
+          <div class="review__content">
+            <label class="review__label">리뷰</label>
+            <textarea
+              class="review__textarea"
+              placeholder="내용을 입력해 주세요."
+              cols="40"
+              rows="10"
+              minlength="5"
+              required
+            ></textarea>
+            <input type="submit" class="review__submitbtn" value="등록" />
+          </div>
+        </form>
+      </div>
+
+      <ul id="review__lists">
+        <!-- <li class="review__list">
+          <div>
+            <span>이름</span>
+            <span>⭐️⭐️⭐️</span>
+          </div>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Perspiciatis obcaecati inventore laborum nulla velit. Impedit
+            repudiandae voluptatum officiis sint nobis optio pariatur hic maxime
+            itaque accusamus! Numquam dignissimos consequuntur quos.
+          </p>
+          <button class="modal__open-btn">모달</button>
+          <div class="hidden modal__container">
+            <div class="modal__content">
+              <input
+                type="password"
+                placeholder="비밀번호를 입력하세요"
+                required
+              />
+              <div>
+                <button class="modal__close-btn">취소</button>
+                <button class="modal__delete-btn">삭제</button>
+              </div>
+            </div>
+          </div>
+        </li> -->
+      </ul>
     </div>
-    <div class="movie-overview">스토리입니다</div>
-  </main>
-  <div class="review">
-    <div class="review__wrap">
-      <form class="review__form">
-        <div class="review__info">
-          <label class="review__label">이름: </label>
-          <input type="text" class="review__username" placeholder="이름을 입력해주세요" minlength="1" required />
-          <label class="review__label">비밀번호: </label>
-          <input type="password" class="review__password" placeholder="비밀번호 (4자 이상)" minlength="4" required />
-          <label class="review__label">별점: </label>
-          <select class="review__star" id="star" required>
-            <option selected value="">별점 선택</option>
-            <option value="⭐️">⭐️</option>
-            <option value="⭐️⭐️">⭐️⭐️</option>
-            <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
-            <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
-            <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
-          </select>
-        </div>
-        <div class="review__content">
-          <label class="review__label">리뷰</label>
-          <textarea class="review__textarea" placeholder="내용을 입력해 주세요." cols="40" rows="10" minlength="5"
-            required></textarea>
-          <input type="submit" class="review__submitbtn" value="등록" />
-        </div>
-      </form>
-    </div>
-
-    <ul id="review__lists">
-      <li class="review__list">
-        <div>
-          <span>이름</span>
-          <span>⭐️⭐️⭐️</span>
-        </div>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Perspiciatis obcaecati inventore laborum nulla velit. Impedit
-          repudiandae voluptatum officiis sint nobis optio pariatur hic maxime
-          itaque accusamus! Numquam dignissimos consequuntur quos.
-        </p>
-        <div>
-          <button>삭제</button>
-        </div>
-      </li>
-    </ul>
-  </div>
-  </main>
-
-</body>
-
+  </body>
 </html>
