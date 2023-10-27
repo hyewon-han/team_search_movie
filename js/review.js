@@ -111,15 +111,16 @@ function deleteReview(event) {
 
   const modalInput = document.querySelector(".modal__input");
   console.log(modalInput.value);
-  if (targetReview.password === modalInput.value) {
-    reviewStorage = reviewStorage.filter(
-      (review) => review.id !== parseInt(li.id)
-    );
-    saveReview();
-    li.remove();
-  } else {
+  if (targetReview.password !== modalInput.value) {
     alert("비밀번호가 일치하지 않습니다.");
+    return;
   }
+
+  reviewStorage = reviewStorage.filter(
+    (review) => review.id !== parseInt(li.id)
+  );
+  saveReview();
+  li.remove();
 }
 
 //    modal
