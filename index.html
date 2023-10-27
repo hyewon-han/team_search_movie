@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" type="image/x-icon" href="asset/favicon.ico" />
-  <script src="js/api.js" type="module"></script>
-  <script src="js/movie.js" type="module"></script>
-  <script src="js/topbtn.js" type="module"></script>
-  <script src="js/darkbtn.js" type="module"></script>
-  <link rel="icon" type="image/x-icon" href="asset/favicon.ico" />
-  <title>혜원이의 최고 평점 영화 콜렉션</title>
-</head>
-
-<body>
-  <header class="title">
-    <a href="index.html" id="homeButton">
-      <img src="asset/logoRed.png" alt="이미지 없음" style="width: 200px; height: 100%" />
-    </a>
-    <span class="nexthome">CULTUREPLEX</span>
-    <span class="title__text">🍿 혜원이의 최고 평점 영화 콜렉션 🍿</span>
-    <button id="darkModeToggle">🌜️ DARK</button>
-  </header>
-  <div class="search">
-    <form class="search__form">
-      <label>영화 검색 :</label>
-      <input id="search__value" type="text" placeholder="영화 제목을 검색해 보세요" autofocus />
-      <button class="search__btn">검색</button>
-    </form>
-  </div>
-  <div class="movie-cards">
-    <!-- <div class="movie-card">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="asset/favicon.ico" />
+    <script src="js/api.js" type="module"></script>
+    <script src="js/movie.js" type="module"></script>
+    <script src="js/topbtn.js" type="module"></script>
+    <script src="js/darkbtn.js" type="module"></script>
+    <link rel="icon" type="image/x-icon" href="asset/favicon.ico" />
+    <title>혜원이의 최고 평점 영화 콜렉션</title>
+  </head>
+  <body>
+    <header class="title">
+      <a href="index.html" id="homeButton">
+        <img
+          src="asset/logoRed.png"
+          alt="이미지 없음"
+          style="width: 200px; height: 100%"
+        />
+      </a>
+      <span class="nexthome">CULTUREPLEX</span>
+      <span class="title__text">🍿 혜원이의 최고 평점 영화 콜렉션 🍿</span>
+      <button id="darkModeToggle">🌜️ DARK</button>
+    </header>
+    <div class="search">
+      <form class="search__form">
+        <label>영화 검색 :</label>
+        <input
+          id="search__value"
+          type="text"
+          placeholder="영화 제목을 검색해 보세요"
+          autofocus
+        />
+        <button class="search__btn">검색</button>
+      </form>
+    </div>
+    <div class="movie-cards">
+      <!-- <div class="movie-card">
         <div class="movie-card__poster">
           <img src="#" />
         </div>
@@ -46,10 +53,9 @@
           <div class="movie-card__vote-average">평점</div>
         </div> 
       </div> -->
-  </div>
-  <div class="noMovie"></div>
-  <button class="moveTop">Top</button>
-  <footer>COPYRIGHT&copy; Hyewon Movies All rights reserved.</footer>
-</body>
-
+    </div>
+    <div class="noMovie"></div>
+    <button class="moveTop">Top</button>
+    <footer>COPYRIGHT&copy; Hyewon Movies All rights reserved.</footer>
+  </body>
 </html>
