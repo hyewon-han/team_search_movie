@@ -25,7 +25,6 @@ body.dark-mode {
   line-height: 1.5em;
 }
 
-
 #homeButton {
   position: absolute;
   left: 1%;
@@ -36,11 +35,9 @@ body.dark-mode {
   font-size: 1.5rem;
 }
 
-
 #darkModeToggle {
   position: absolute;
   height: 80px;
-
   right: 1%;
-  top: 1%
+  top: 1%;
 }
