@@ -12,34 +12,55 @@
   display: flex;
   justify-content: center !important;
   align-items: center;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 9;
 }
 
 .modal__content {
   position: absolute;
-  background-color: #ffffff;
-  opacity: 0.85;
-  color: black;
+  background-color: whitesmoke;
   width: 600px;
   height: 400px;
   padding: 15px;
   border-radius: 15px;
-  font-size: 18px;
-  line-height: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center !important;
+  justify-content: space-evenly !important;
   align-items: center;
 }
 
 .modal__content input {
-  width: 200px;
+  width: 250px;
   height: 30px;
+  padding: 10px;
+  font-size: large;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+}
+.modal__content input:focus {
+  outline: 1px ridge var(--pink);
 }
 
-.modal__content > div {
-  background-color: tomato;
+.modal__container button {
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: var(--pink);
+  color: white;
+  border-radius: 20px;
+  border: none;
+  transition: all 0.1s ease-in-out;
+}
+
+.modal__container button:hover {
+  filter: brightness(1.1);
+  transform: scale(1.1);
+}
+
+.modal__content div {
+  width: 250px;
 }
 
 .modal__container.hidden {

@@ -32,7 +32,6 @@
         <div class="movie-detail">
           <h2 class="movie-title"></h2>
           <h3 class="movie-tagline"></h3>
-
           <div class="movie-info">
             <ul class="detail-inner">
               <li class="inner-content">
@@ -70,26 +69,29 @@
     <div class="review">
       <div class="review__wrap">
         <form class="review__form">
+          <h1>Please write a review</h1>
           <div class="review__info">
-            <label class="review__label">이름: </label>
+            <!-- <label class="review__label">이름: </label> -->
             <input
               type="text"
               class="review__username"
-              placeholder="이름을 입력해주세요"
+              placeholder="Name"
               minlength="1"
+              maxlength="5"
               required
             />
-            <label class="review__label">비밀번호: </label>
+            <!-- <label class="review__label">비밀번호: </label> -->
             <input
               type="password"
               class="review__password"
-              placeholder="비밀번호 (4자 이상)"
+              placeholder="Password"
               minlength="4"
+              maxlength="8"
               required
             />
-            <label class="review__label">별점: </label>
+            <!-- <label class="review__label">별점: </label> -->
             <select class="review__star" id="star" required>
-              <option selected value="">별점 선택</option>
+              <option selected value="">Select rating</option>
               <option value="⭐️">⭐️</option>
               <option value="⭐️⭐️">⭐️⭐️</option>
               <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
@@ -98,16 +100,16 @@
             </select>
           </div>
           <div class="review__content">
-            <label class="review__label">리뷰</label>
+            <!-- <label class="review__label">Review</label> -->
             <textarea
               class="review__textarea"
-              placeholder="내용을 입력해 주세요."
+              placeholder=" Please enter the contents"
               cols="40"
               rows="10"
               minlength="5"
               required
             ></textarea>
-            <input type="submit" class="review__submitbtn" value="등록" />
+            <input type="submit" class="review__submitbtn" value="Submit" />
           </div>
         </form>
       </div>
@@ -141,5 +143,6 @@
         </li> -->
       </ul>
     </div>
+    <footer>COPYRIGHT&copy; eGV All rights reserved.</footer>
   </body>
 </html>

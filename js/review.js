@@ -44,7 +44,7 @@ function paintReview(reviewObj) {
   <span>${reviewObj.star}</span>
   </div>
   <p>${reviewObj.review}</p>`;
-  openBtn.innerText = "모달";
+  openBtn.innerText = "❌";
   openBtn.classList.add("modal__open-btn");
   openBtn.addEventListener("click", (e) => {
     const modal = modalsArray.find(
