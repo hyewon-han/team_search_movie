@@ -31,7 +31,7 @@ footer {
   border-bottom: 2px solid var(--red);
 }
 
-.title__text {
+.title-text {
   font-size: 32px;
   font-weight: 1000;
 }

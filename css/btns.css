@@ -18,7 +18,11 @@ body.dark-mode {
   line-height: 1.5em;
 }
 
-#homeButton {
+#home-button {
+  background-color: var(--green);
+  color: black;
+  border-radius: 4px;
+
   position: absolute;
   left: 1%;
   height: 70px;
@@ -28,7 +32,17 @@ body.dark-mode {
   font-size: 1.5rem;
 }
 
-#darkModeToggle {
+body.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+#dark-mode-toggle {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+
   position: absolute;
   height: 60px;
   border-radius: 30px;
@@ -40,4 +54,12 @@ body.dark-mode {
 
 #darkModeToggle:hover {
   cursor: pointer;
+}
+
+.nexthome {
+  font-weight: 300;
+  font-size: 16px;
+  color: #222;
+  letter-spacing: 0.313em;
+  line-height: 1.5em;
 }
