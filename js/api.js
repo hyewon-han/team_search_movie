@@ -21,11 +21,8 @@ fetch(
     result.forEach((movie) => {
       addMovie(movie);
     });
-    // console.log(response)
-    sortMovie(result)
-
+    return result
   })
-
+  .then((result) => sortMovie(result))
   .then(searchMovie)
-  .then(sortMovie)
   .catch((err) => console.error(err));

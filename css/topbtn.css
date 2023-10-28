@@ -1,4 +1,4 @@
-.moveTop {
+.move-top {
   z-index: 2;
   visibility: hidden;
   position: fixed;
@@ -12,6 +12,7 @@
   outline: none;
   border-radius: 50%;
 }
-.moveTop:hover {
+
+.move-top:hover {
   filter: brightness(150%);
 }

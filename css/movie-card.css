@@ -15,23 +15,23 @@
   height: 500px;
 }
 
-.movie-card__poster {
+.movie-card-poster {
   margin: 20px 0px;
   display: flex;
   justify-content: center;
 }
 
-.movie-card__poster img {
+.movie-card-poster img {
   width: 260px;
   height: 390px;
   border-radius: 10px;
 }
 
-.movie-card__content {
+.movie-card-content {
   margin: 0px 20px;
 }
 
-.movie-card__title {
+.movie-card-title {
   font-size: 18px;
   font-weight: bolder;
 }
@@ -40,7 +40,7 @@
   display: none;
 }
 
-.movie-card__overview {
+.movie-card-overview {
   color: white;
   padding: 10px;
   border-radius: 10px;
@@ -56,11 +56,11 @@
   transition: all 0.2s ease-in-out;
 }
 
-.movie-card__overview:hover {
+.movie-card-overview:hover {
   opacity: 1;
 }
 
-.noMovie {
+.no-movie {
   display: flex;
   justify-content: center;
   margin: 100px;
