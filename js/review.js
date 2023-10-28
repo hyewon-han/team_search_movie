@@ -55,8 +55,17 @@ function paintReview(reviewObj) {
   const div1 = document.createElement("div");
   div1.classList.add("hidden");
   div1.classList.add("modal__container");
+  div1.addEventListener("click", (e) => {
+    const modal = modalsArray.find(
+      (modal) => modal.parentElement.id === e.target.closest(".review__list").id
+    );
+    modal.classList.add("hidden");
+  });
   const div2 = document.createElement("div");
   div2.classList.add("modal__content");
+  div2.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
   const input = document.createElement("input");
   input.setAttribute("type", "password");
   input.setAttribute("placeholder", "비밀번호를 입력하세요");
@@ -115,7 +124,10 @@ function deleteReview(event) {
       input.closest(".review__list").id ===
       event.target.closest(".review__list").id
   );
-  if (targetReview.password !== input.value) {
+  if (input.value === "") {
+    alert("비밀번호를 입력하세요.");
+    return;
+  } else if (targetReview.password !== input.value) {
     alert("비밀번호가 일치하지 않습니다.");
     input.value = "";
     return;
