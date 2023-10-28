@@ -8,7 +8,7 @@
 
 .movie-card {
   position: relative;
-  background-color: var(--beige);
+  background-color: var(--dark-grey);
   box-shadow: var(--box-shadow);
   border-radius: 10px;
   width: 300px;
