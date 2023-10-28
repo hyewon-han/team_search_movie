@@ -67,9 +67,7 @@ function paintReview(reviewObj) {
   closeBtn.innerText = "취소";
   closeBtn.addEventListener("click", (e) => {
     const modal = modalsArray.find(
-      (modal) =>
-        modal.parentElement.id ===
-        e.target.parentElement.parentElement.parentElement.parentElement.id
+      (modal) => modal.parentElement.id === e.target.closest(".review__list").id
     );
     modal.classList.add("hidden");
   });
@@ -106,8 +104,7 @@ function handleTextareaEnter(e) {
 reviewTextarea.addEventListener("keyup", handleTextareaEnter);
 
 function deleteReview(event) {
-  const li =
-    event.target.parentElement.parentElement.parentElement.parentElement;
+  const li = event.target.closest(".review__list");
   const targetReview = reviewStorage.find(
     (review) => review.id === parseInt(li.id)
   );
@@ -115,8 +112,8 @@ function deleteReview(event) {
   const modalInputsArray = Array.from(modalInputs);
   const input = modalInputsArray.find(
     (input) =>
-      input.parentElement.parentElement.parentElement.id ===
-      event.target.parentElement.parentElement.parentElement.parentElement.id
+      input.closest(".review__list").id ===
+      event.target.closest(".review__list").id
   );
   if (targetReview.password !== input.value) {
     alert("비밀번호가 일치하지 않습니다.");
