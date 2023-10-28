@@ -7,13 +7,13 @@ export function addMovie(movie) {
   const div = document.createElement("div");
   div.classList.add("movie-card");
 
-  div.innerHTML = `<div class="movie-card__poster">
+  div.innerHTML = `<div class="movie-card-poster">
   <a href='movie.html?id=${movie.id}'/>
     <img src=${base_url}${file_size}${file_path} /></div>
-  <div class="movie-card__content">
-    <div class="movie-card__title">${movie.title}</div>
-    <div class="movie-card__overview">${movie.overview}</div>
-    <div class="movie-card__vote-average">Ratings : ${movie.vote_average}</div>
+  <div class="movie-card-content">
+    <div class="movie-card-title">${movie.title}</div>
+    <div class="movie-card-overview">${movie.overview}</div>
+    <div class="movie-card-vote-average">Ratings : ${movie.vote_average}</div>
   </div>`;
   // div.addEventListener("click", () => {
   //   const url = window.location.href + "movie.html?id=" + movie.id;

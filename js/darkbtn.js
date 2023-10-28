@@ -1,4 +1,4 @@
-const myButton = document.getElementById("darkModeToggle");
+const myButton = document.getElementById("dark-mode-toggle");
 
 const currentText = "🌞 LIGHT";
 const alternateText = "🌜️  DARK";
@@ -15,7 +15,7 @@ myButton.addEventListener("click", function () {
   }
 });
 
-const darkModeToggle = document.getElementById("darkModeToggle");
+const darkModeToggle = document.getElementById("dark-mode-toggle");
 
 darkModeToggle.addEventListener("click", function () {
   document.body.classList.toggle("dark-mode");
