@@ -3,11 +3,12 @@ body.dark-mode {
   color: #fff;
 }
 
-#darkModeToggle {
+#dark-mode-toggle {
   background-color: black;
   color: white;
   padding: 10px 20px;
   border-radius: 4px;
+  margin-right: 50px;
 }
 
 .nexthome {
@@ -16,20 +17,7 @@ body.dark-mode {
   color: #222;
   letter-spacing: 0.313em;
   line-height: 1.5em;
-}
-
-#home-button {
-  background-color: var(--green);
-  color: black;
-  border-radius: 4px;
-
-  position: absolute;
-  left: 1%;
-  height: 70px;
-  width: 50px;
-
-  text-align: center;
-  font-size: 1.5rem;
+  margin-top: 30px;
 }
 
 body.dark-mode {
@@ -43,13 +31,10 @@ body.dark-mode {
   padding: 10px 20px;
   border-radius: 4px;
 
-  position: absolute;
   height: 60px;
   border-radius: 30px;
   box-shadow: var(--box-shadow);
   border: none;
-  right: 1%;
-  top: 3%;
 }
 
 #darkModeToggle:hover {
