@@ -6,8 +6,10 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image/x-icon" href="asset/favicon.ico" />
     <script src="js/content.js" type="module"></script>
+    <script src="js/credit.js" type="module"></script>
     <script src="js/review.js" type="module"></script>
     <script src="js/darkbtn.js" type="module"></script>
+    <script src="js/topbtn.js" type="module"></script>
     <title></title>
   </head>
   <body class="detail-body">
@@ -65,13 +67,44 @@
         </div>
       </div>
       <div class="movie-overview"></div>
+      <div class="credit">
+        <h1>Cast</h1>
+        <ul class="credit__casts">
+          <li class="credit__actor">
+            <img
+              src="#"
+              id="actor-img1"
+              onerror="this.src='https://t3.ftcdn.net/jpg/03/34/83/22/240_F_334832255_IMxvzYRygjd20VlSaIAFZrQWjozQH6BQ.jpg';"
+            />
+            <p class="actor-name" id="actor-name1"></p>
+            <p class="actor-character" id="actor-character1"></p>
+          </li>
+          <li class="credit__actor">
+            <img
+              src="#"
+              id="actor-img2"
+              onerror="this.src='https://t3.ftcdn.net/jpg/03/34/83/22/240_F_334832255_IMxvzYRygjd20VlSaIAFZrQWjozQH6BQ.jpg';"
+            />
+            <p class="actor-name" id="actor-name2"></p>
+            <p class="actor-character" id="actor-character2"></p>
+          </li>
+          <li class="credit__actor">
+            <img
+              src="#"
+              id="actor-img3"
+              onerror="this.src='https://t3.ftcdn.net/jpg/03/34/83/22/240_F_334832255_IMxvzYRygjd20VlSaIAFZrQWjozQH6BQ.jpg';"
+            />
+            <p class="actor-name" id="actor-name3"></p>
+            <p class="actor-character" id="actor-character3"></p>
+          </li>
+        </ul>
+      </div>
     </main>
     <div class="review">
       <div class="review__wrap">
         <form class="review__form">
           <h1>Please write a review</h1>
           <div class="review__info">
-            <!-- <label class="review__label">이름: </label> -->
             <input
               type="text"
               class="review__username"
@@ -80,7 +113,6 @@
               maxlength="5"
               required
             />
-            <!-- <label class="review__label">비밀번호: </label> -->
             <input
               type="password"
               class="review__password"
@@ -89,7 +121,6 @@
               maxlength="8"
               required
             />
-            <!-- <label class="review__label">별점: </label> -->
             <select class="review__star" id="star" required>
               <option selected value="">Select rating</option>
               <option value="⭐️">⭐️</option>
@@ -100,7 +131,6 @@
             </select>
           </div>
           <div class="review__content">
-            <!-- <label class="review__label">Review</label> -->
             <textarea
               class="review__textarea"
               placeholder=" Please enter the contents"
@@ -143,6 +173,7 @@
         </li> -->
       </ul>
     </div>
+    <button class="move-top">Top</button>
     <footer>COPYRIGHT&copy; eGV All rights reserved.</footer>
   </body>
 </html>

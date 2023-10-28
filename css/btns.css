@@ -3,14 +3,6 @@ body.dark-mode {
   color: #fff;
 }
 
-#dark-mode-toggle {
-  background-color: black;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 4px;
-  margin-right: 50px;
-}
-
 .nexthome {
   font-weight: 300;
   font-size: 16px;
@@ -30,14 +22,14 @@ body.dark-mode {
   color: white;
   padding: 10px 20px;
   border-radius: 4px;
-
   height: 60px;
   border-radius: 30px;
   box-shadow: var(--box-shadow);
   border: none;
+  transition: all 0.3s ease-in-out;
 }
 
-#darkModeToggle:hover {
+#dark-mode-toggle:hover {
   cursor: pointer;
 }
 
