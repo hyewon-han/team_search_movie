@@ -2,7 +2,7 @@
 
 
 export const sortMovie = function (unsorted) {
-    console.log(unsorted)
+  console.log(unsorted)
 }
 
 // export const sortMovie = function (movie) {

@@ -11,7 +11,10 @@ const options = {
   },
 };
 
-fetch("https://api.themoviedb.org/3/movie/popular?language=en-US&page=1", options)
+fetch(
+  "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1",
+  options
+)
   .then((response) => response.json())
   .then((response) => {
     const result = response.results;
@@ -24,8 +27,5 @@ fetch("https://api.themoviedb.org/3/movie/popular?language=en-US&page=1", option
   })
 
   .then(searchMovie)
-
-  // .then((response) => {
-  //   console.log(response) = undefiend
-  // })
+  .then(sortMovie)
   .catch((err) => console.error(err));
