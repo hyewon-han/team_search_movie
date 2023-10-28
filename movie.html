@@ -1,97 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="asset/favicon.ico" />
+    <script src="js/content.js" type="module"></script>
+    <script src="js/review.js" type="module"></script>
+    <script src="js/darkbtn.js" type="module"></script>
+    <title></title>
+  </head>
+  <body class="detail-body">
+    <header class="title">
+      <div class="title-home">
+        <a href="index.html" id="home-button">
+          <img
+            src="asset/logoRed.png"
+            alt="이미지 없음"
+            style="width: 150px; height: 90%"
+          />
+        </a>
+        <span class="nexthome">CULTUREPLEX</span>
+      </div>
+      <span class="title-text">BEST MOVIE COLLECTION</span>
+      <button id="dark-mode-toggle">🌜️ DARK</button>
+    </header>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" type="image/x-icon" href="asset/favicon.ico" />
-  <script src="js/content.js" type="module"></script>
-  <script src="js/review.js" type="module"></script>
-  <script src="js/darkbtn.js" type="module"></script>
-  <title></title>
-</head>
-
-<body class="detail-body">
-  <header class="title">
-    <a href="index.html" id="home-button">
-      <img src="asset/logoRed.png" alt="이미지 없음" style="width: 200px; height: 100%" />
-    </a>
-    <span class="nexthome">CULTUREPLEX</span>
-    <span class="title-text">🍿 혜원이의 최고 평점 영화 콜렉션 🍿</span>
-    <button id="dark-mode-toggle">🌜️ DARK</button>
-  </header>
-
-  <main class="movie-content">
-    <div class="movie-content-top">
-      <figure class="movie-poster">포스터입니다</figure>
-      <div class="movie-detail">
-        <h2 class="movie-title">타이틀입니다</h2>
-        <h3 class="movie-tagline">한줄평입니다</h3>
-
-        <div class="movie-info">
-          <ul class="detail-inner">
-            <li class="inner-content">
-              <p>Release Date <br />📽</p>
-              <p></p>
-            </li>
-            <li class="inner-content">
-              <p>Genre <br />🎞</p>
-              <p></p>
-            </li>
-            <li class="inner-content">
-              <p>Runtime <br />🎦</p>
-              <p>겁나김</p>
-            </li>
-          </ul>
-          <ul class="detail-inner">
-            <li class="inner-content">
-              <p>vote average<br />⭐</p>
-              <p></p>
-            </li>
-            <li class="inner-content">
-              <p>Country <br />🌏</p>
-              <p></p>
-            </li>
-            <li class="inner-content">
-              <p>Language <br />🔊</p>
-              <p></p>
-            </li>
-          </ul>
+    <main class="movie-content">
+      <div class="movie-content-top">
+        <figure class="movie-poster"></figure>
+        <div class="movie-detail">
+          <h2 class="movie-title"></h2>
+          <h3 class="movie-tagline"></h3>
+          <div class="movie-info">
+            <ul class="detail-inner">
+              <li class="inner-content">
+                <p>Release Date</p>
+                <p></p>
+              </li>
+              <li class="inner-content">
+                <p>Genre</p>
+                <p></p>
+              </li>
+              <li class="inner-content">
+                <p>Runtime</p>
+                <p></p>
+              </li>
+            </ul>
+            <ul class="detail-inner">
+              <li class="inner-content">
+                <p>vote average</p>
+                <p></p>
+              </li>
+              <li class="inner-content">
+                <p>Country</p>
+                <p></p>
+              </li>
+              <li class="inner-content">
+                <p>Language</p>
+                <p></p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="movie-overview">스토리입니다</div>
-  </main>
-  <div class="review">
-    <div class="review__wrap">
-      <form class="review__form">
-        <div class="review__info">
-          <label class="review__label">이름: </label>
-          <input type="text" class="review__username" placeholder="이름을 입력해주세요" minlength="1" required />
-          <label class="review__label">비밀번호: </label>
-          <input type="password" class="review__password" placeholder="비밀번호 (4자 이상)" minlength="4" required />
-          <label class="review__label">별점: </label>
-          <select class="review__star" id="star" required>
-            <option selected value="">별점 선택</option>
-            <option value="⭐️">⭐️</option>
-            <option value="⭐️⭐️">⭐️⭐️</option>
-            <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
-            <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
-            <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
-          </select>
-        </div>
-        <div class="review__content">
-          <label class="review__label">리뷰</label>
-          <textarea class="review__textarea" placeholder="내용을 입력해 주세요." cols="40" rows="10" minlength="5"
-            required></textarea>
-          <input type="submit" class="review__submitbtn" value="등록" />
-        </div>
-      </form>
-    </div>
+      <div class="movie-overview"></div>
+    </main>
+    <div class="review">
+      <div class="review__wrap">
+        <form class="review__form">
+          <h1>Please write a review</h1>
+          <div class="review__info">
+            <!-- <label class="review__label">이름: </label> -->
+            <input
+              type="text"
+              class="review__username"
+              placeholder="Name"
+              minlength="1"
+              maxlength="5"
+              required
+            />
+            <!-- <label class="review__label">비밀번호: </label> -->
+            <input
+              type="password"
+              class="review__password"
+              placeholder="Password"
+              minlength="4"
+              maxlength="8"
+              required
+            />
+            <!-- <label class="review__label">별점: </label> -->
+            <select class="review__star" id="star" required>
+              <option selected value="">Select rating</option>
+              <option value="⭐️">⭐️</option>
+              <option value="⭐️⭐️">⭐️⭐️</option>
+              <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
+              <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
+              <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
+            </select>
+          </div>
+          <div class="review__content">
+            <!-- <label class="review__label">Review</label> -->
+            <textarea
+              class="review__textarea"
+              placeholder=" Please enter the contents"
+              cols="40"
+              rows="10"
+              minlength="5"
+              required
+            ></textarea>
+            <input type="submit" class="review__submitbtn" value="Submit" />
+          </div>
+        </form>
+      </div>
 
-    <ul id="review__lists">
-      <!-- <li class="review__list">
+      <ul id="review__lists">
+        <!-- <li class="review__list">
           <div>
             <span>이름</span>
             <span>⭐️⭐️⭐️</span>
@@ -117,8 +141,8 @@
             </div>
           </div>
         </li> -->
-    </ul>
-  </div>
-</body>
-
+      </ul>
+    </div>
+    <footer>COPYRIGHT&copy; eGV All rights reserved.</footer>
+  </body>
 </html>

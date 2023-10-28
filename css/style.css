@@ -12,7 +12,7 @@
 body {
   font-family: "Nanum Gothic", sans-serif;
   height: 100vh;
-  background-color: var(--green);
+  background-color: var(--grey);
 }
 
 footer {
@@ -22,16 +22,27 @@ footer {
 }
 
 .title {
+  z-index: 2;
   background-color: white;
+  position: fixed;
+  top: 0;
   color: black;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 100px;
-  border-bottom: 2px solid red;
+  width: 100%;
+  border-bottom: 2px solid var(--red);
 }
 
 .title-text {
   font-size: 32px;
-  font-weight: 1000;
+  font-weight: 500;
+  margin-right: 120px;
+}
+
+.title-home {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 50px;
 }
