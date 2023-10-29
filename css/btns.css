@@ -25,6 +25,23 @@ body.dark-mode {
   margin-top: 30px;
 }
 
+body.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+#dark-mode-toggle {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  height: 60px;
+  border-radius: 30px;
+  box-shadow: var(--box-shadow);
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
 #dark-mode-toggle:hover {
   cursor: pointer;
 }

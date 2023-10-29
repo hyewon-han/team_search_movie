@@ -5,12 +5,16 @@ const reviewStar = document.querySelector(".review__star");
 const reviewTextarea = document.querySelector(".review__textarea");
 const reviewSubmitBtn = document.querySelector(".review__submitbtn");
 const reviewLists = document.getElementById("review__lists");
+const reviewBox = document.querySelector(".review__box");
+let reviewCount = document.getElementById("review__count");
 const URLSearch = new URLSearchParams(location.search);
 let id = parseInt(URLSearch.get("id"));
+let cnt = 0;
 let reviewStorage = [];
 
 function saveReview() {
   localStorage.setItem("review", JSON.stringify(reviewStorage));
+  console.log(reviewStorage.length);
 }
 
 function submitReview(e) {
@@ -35,6 +39,11 @@ const modals = document.querySelectorAll(".modal__container");
 let modalsArray = Array.from(modals);
 
 function paintReview(reviewObj) {
+  cnt++;
+  reviewCount.innerText = `+ ${cnt}`;
+  if (cnt !== 0) {
+    reviewBox.style.display = "flex";
+  }
   const li = document.createElement("li");
   const openBtn = document.createElement("button");
   li.id = reviewObj.id;
