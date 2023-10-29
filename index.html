@@ -1,56 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" type="image/x-icon" href="asset/favicon.ico" />
-    <script src="js/api.js" type="module"></script>
-    <script src="js/movie.js" type="module"></script>
-    <script src="js/topbtn.js" type="module"></script>
-    <script src="js/darkbtn.js" type="module"></script>
-    <script src="js/sort.js" type="module"></script>
 
-    <link rel="icon" type="image/x-icon" href="asset/favicon.ico" />
-    <title>BEST MOVIE COLLECTION</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/x-icon" href="asset/favicon.ico" />
+  <script src="js/api.js" type="module"></script>
+  <script src="js/movie.js" type="module"></script>
+  <script src="js/topbtn.js" type="module"></script>
+  <script src="js/darkbtn.js" type="module"></script>
+  <script src="js/sort.js" type="module"></script>
 
-  <body>
-    <header class="title">
-      <div class="title-home">
-        <a href="index.html" id="home-button">
-          <img
-            src="asset/logoRed.png"
-            alt="이미지 없음"
-            style="width: 150px; height: 90%"
-          />
-        </a>
-        <span class="nexthome">CULTUREPLEX</span>
-      </div>
-      <span class="title-text">BEST MOVIE COLLECTION</span>
-      <button id="dark-mode-toggle">🌜️ DARK</button>
-    </header>
+  <link rel="icon" type="image/x-icon" href="asset/favicon.ico" />
+  <title>BEST MOVIE COLLECTION</title>
+</head>
 
-    <div class="search">
-      <div></div>
-      <form class="search-form">
-        <input
-          id="search-value"
-          type="text"
-          placeholder="Search for movies"
-          autofocus
-        />
-        <button class="search-btn">Search</button>
-      </form>
-      <div class="sort-btns">
-        <button class="sort-vote-average">Rating</button>
-        <button class="sort-title">Title</button>
-        <button class="sort-release-date">Date</button>
-      </div>
+<body>
+  <header class="title">
+    <div class="title-home">
+      <a href="index.html" id="home-button">
+        <img src="asset/logoRed.png" alt="이미지 없음" style="width: 150px; height: 90%" />
+      </a>
+      <span class="nexthome">CULTUREPLEX</span>
     </div>
+    <span class="title-text">BEST MOVIE COLLECTION</span>
+    <button id="dark-mode-toggle">🌜️ DARK</button>
+  </header>
 
-    <div class="movie-cards">
-      <!-- <div class="movie-card">
+  <div class="search">
+    <div></div>
+    <form class="search-form">
+      <input id="search-value" type="text" placeholder="Search for movies" autofocus />
+      <button class="search-btn">Search</button>
+    </form>
+    <div class="sort-btns">
+      <button class="sort-vote-average">Rating</button>
+      <button class="sort-title">Title</button>
+      <button class="sort-release-date">Date</button>
+    </div>
+  </div>
+
+  <div class="movie-cards">
+    <!-- <div class="movie-card">
         <div class="movie-card-poster">
           <img src="#" />
         </div>
@@ -65,9 +57,10 @@
           <div class="movie-card-vote-average">평점</div>
         </div> 
       </div> -->
-    </div>
-    <div class="no-movie"></div>
-    <button class="move-top">Top</button>
-    <footer>COPYRIGHT&copy; eGV All rights reserved.</footer>
-  </body>
+  </div>
+  <div class="no-movie"></div>
+  <button class="move-top">Top</button>
+  <footer>COPYRIGHT&copy; eGV All rights reserved.</footer>
+</body>
+
 </html>

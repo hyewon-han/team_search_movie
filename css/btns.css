@@ -3,6 +3,19 @@ body.dark-mode {
   color: #fff;
 }
 
+#dark-mode-toggle {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin-right: 50px;
+
+  height: 60px;
+  border-radius: 30px;
+  box-shadow: var(--box-shadow);
+  border: none;
+}
+
 .nexthome {
   font-weight: 300;
   font-size: 16px;
@@ -31,12 +44,4 @@ body.dark-mode {
 
 #dark-mode-toggle:hover {
   cursor: pointer;
-}
-
-.nexthome {
-  font-weight: 300;
-  font-size: 16px;
-  color: #222;
-  letter-spacing: 0.313em;
-  line-height: 1.5em;
 }
