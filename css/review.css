@@ -156,3 +156,25 @@
   filter: brightness(1.1);
   transform: scale(1.1);
 }
+
+.review__box {
+  display: flex;
+  align-items: center;
+  width: 90%;
+}
+
+#review__title {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 20px;
+}
+
+#review__count {
+  color: var(--pink);
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.review__box {
+  display: none;
+}
