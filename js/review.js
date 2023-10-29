@@ -44,7 +44,7 @@ function paintReview(reviewObj) {
   <span>${reviewObj.star}</span>
   </div>
   <p>${reviewObj.review}</p>`;
-  openBtn.innerText = "모달";
+  openBtn.innerText = "❌";
   openBtn.classList.add("modal__open-btn");
   openBtn.addEventListener("click", (e) => {
     const modal = modalsArray.find(
@@ -55,8 +55,17 @@ function paintReview(reviewObj) {
   const div1 = document.createElement("div");
   div1.classList.add("hidden");
   div1.classList.add("modal__container");
+  div1.addEventListener("click", (e) => {
+    const modal = modalsArray.find(
+      (modal) => modal.parentElement.id === e.target.closest(".review__list").id
+    );
+    modal.classList.add("hidden");
+  });
   const div2 = document.createElement("div");
   div2.classList.add("modal__content");
+  div2.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
   const input = document.createElement("input");
   input.setAttribute("type", "password");
   input.setAttribute("placeholder", "비밀번호를 입력하세요");
@@ -67,9 +76,7 @@ function paintReview(reviewObj) {
   closeBtn.innerText = "취소";
   closeBtn.addEventListener("click", (e) => {
     const modal = modalsArray.find(
-      (modal) =>
-        modal.parentElement.id ===
-        e.target.parentElement.parentElement.parentElement.parentElement.id
+      (modal) => modal.parentElement.id === e.target.closest(".review__list").id
     );
     modal.classList.add("hidden");
   });
@@ -106,8 +113,7 @@ function handleTextareaEnter(e) {
 reviewTextarea.addEventListener("keyup", handleTextareaEnter);
 
 function deleteReview(event) {
-  const li =
-    event.target.parentElement.parentElement.parentElement.parentElement;
+  const li = event.target.closest(".review__list");
   const targetReview = reviewStorage.find(
     (review) => review.id === parseInt(li.id)
   );
@@ -115,10 +121,13 @@ function deleteReview(event) {
   const modalInputsArray = Array.from(modalInputs);
   const input = modalInputsArray.find(
     (input) =>
-      input.parentElement.parentElement.parentElement.id ===
-      event.target.parentElement.parentElement.parentElement.parentElement.id
+      input.closest(".review__list").id ===
+      event.target.closest(".review__list").id
   );
-  if (targetReview.password !== input.value) {
+  if (input.value === "") {
+    alert("비밀번호를 입력하세요.");
+    return;
+  } else if (targetReview.password !== input.value) {
     alert("비밀번호가 일치하지 않습니다.");
     input.value = "";
     return;

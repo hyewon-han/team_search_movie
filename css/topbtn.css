@@ -1,4 +1,4 @@
-.moveTop {
+.move-top {
   z-index: 2;
   visibility: hidden;
   position: fixed;
@@ -6,12 +6,18 @@
   right: 1rem;
   width: 4rem;
   height: 4rem;
-  background: #000;
+  background-color: var(--red);
   color: #fff;
   border: none;
   outline: none;
   border-radius: 50%;
+  font-size: 20px;
+  font-weight: 300;
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease-in-out;
 }
-.moveTop:hover {
-  filter: brightness(150%);
+
+.move-top:hover {
+  filter: brightness(1.2);
+  transform: scale(1.1);
 }

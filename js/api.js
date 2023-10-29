@@ -17,12 +17,12 @@ fetch(
 )
   .then((response) => response.json())
   .then((response) => {
-    console.log(response);
     const result = response.results;
     result.forEach((movie) => {
       addMovie(movie);
     });
-    sortMovie(result);
+    return result
   })
+  .then((result) => sortMovie(result))
   .then(searchMovie)
   .catch((err) => console.error(err));

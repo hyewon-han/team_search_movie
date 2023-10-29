@@ -5,12 +5,11 @@ const poster = document.querySelector(".movie-poster");
 const title = document.querySelector(".movie-title");
 const tagline = document.querySelector(".movie-tagline");
 const inner = document.querySelectorAll("p");
-const inneContent = Array.from(inner); //nodelist를 array로
+const inneContent = Array.from(inner);
 const overview = document.querySelector(".movie-overview");
 
 async function generateMovieContent() {
   const movie = await fetchMovieContent();
-  // console.log(movie);
   document.title = `eGV | ${movie.title}`;
 
   poster.innerHTML = `<img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" class="poster" alt="...">`;
