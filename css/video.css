@@ -1,0 +1,14 @@
+.video {
+  margin-top: 20px;
+  width: 85%;
+  height: 70px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.video__type {
+  margin-left: 20px;
+}
