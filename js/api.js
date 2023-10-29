@@ -21,7 +21,7 @@ fetch(
     result.forEach((movie) => {
       addMovie(movie);
     });
-    return result
+    return result;
   })
   .then((result) => sortMovie(result))
   .then(searchMovie)
