@@ -20,6 +20,7 @@ export function searchMovie() {
         searchMovieList.push(title);
       } else {
         card.style.display = "none";
+        no.style.display = "none";
       }
     });
     if (searchMovieList.length == 0) {
