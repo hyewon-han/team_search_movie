@@ -19,6 +19,7 @@ fetch(
   .then((response) => {
     const result = response.results;
     result.forEach((movie) => {
+      console.log([movie])
       addMovie(movie);
     });
     return result;
