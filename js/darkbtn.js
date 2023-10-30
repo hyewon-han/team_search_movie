@@ -14,10 +14,22 @@ myButton.addEventListener("click", function () {
     myButton.style.color = "black";
   }
 });
-//다크모드
+
 const darkModeToggle = document.getElementById("darkModeToggle");
 
 darkModeToggle.addEventListener("click", function () {
   document.body.classList.toggle("dark-mode");
 });
-//다크모드
+
+// 밑에는 날씨 API 적용이에요
+let weatherData = await fetch(
+  "https://api.openweathermap.org/data/2.5/weather?lat=37.5666791&lon=126.9782914&appid=a5665c117c73b1089bdaec125ec9b1f9"
+);
+weatherData = await weatherData.json();
+let weather1 = weatherData["weather"][0]["main"];
+const weather2 = document.getElementById("weather");
+weather2.innerHTML = weather1;
+let temp1 = weatherData["main"]["temp"];
+temp1 = (temp1 - 32) / 1.8;
+const temp3 = document.getElementById("temp");
+temp3.innerHTML = temp1;

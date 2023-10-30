@@ -10,12 +10,10 @@ const overview = document.querySelector(".movie-overview");
 
 async function generateMovieContent() {
   const movie = await fetchMovieContent();
-  console.log(movie);
-  document.title = `2GV | ${movie.title}`;
-  poster.innerHTML = `<img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="...">`;
+  // console.log(movie);
+  document.title = `EGV | ${movie.title}`;
 
   poster.innerHTML = `<img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" class="poster" alt="...">`;
-
   title.innerText = movie.title;
   tagline.innerText = movie.tagline;
   inneContent[1].innerText = movie.release_date;
@@ -24,7 +22,6 @@ async function generateMovieContent() {
   movie.genres.forEach((a) => {
     return genres.push(a.name);
   });
-  console.log(genres);
   inneContent[3].innerText = genres;
   inneContent[5].innerText = `${movie.runtime} Minutes`;
   inneContent[7].innerText = movie.vote_average;
