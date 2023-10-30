@@ -71,8 +71,12 @@
   margin-left: 15px;
 }
 
-.inner-content > p {
-  font-size: 1.2rem;
+.inner-content :nth-child(2) {
+  overflow: hidden;
+  word-wrap: break-word;
+  max-width: inherit;
+  font-size: 21px;
+  font-weight: 300;
 }
 
 .inner-content {

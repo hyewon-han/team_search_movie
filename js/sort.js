@@ -1,5 +1,4 @@
 import { addMovie } from "./movie.js";
-import { searchMovie } from "./search.js";
 const movieCards = document.querySelector(".movie-cards");
 const voteAverage = document.querySelector(".sort-vote-average");
 const releaseDate = document.querySelector(".sort-release-date");
