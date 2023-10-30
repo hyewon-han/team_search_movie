@@ -11,6 +11,10 @@ export function searchMovie() {
     const searchMovieList = [];
     let searchedValue = searchValue.value.toLowerCase();
 
+    if (searchMovieList.length == 0) {
+      no.innerHTML = "No movie data.";
+      alert("검색 결과가 없습니다.");
+    }
     movieCard.forEach((card) => {
       const title = card
         .querySelector(".movie-card-title")
@@ -23,10 +27,6 @@ export function searchMovie() {
         card.style.display = "none";
       }
     });
-    if (searchMovieList.length == 0) {
-      no.innerHTML = "No movie data.";
-      alert("검색 결과가 없습니다.");
-    }
   }
   searchBtn.addEventListener("click", handleSearch);
 }

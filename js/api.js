@@ -1,4 +1,3 @@
-import { searchMovie } from "./search.js";
 import { addMovie } from "./movie.js";
 import { sortMovie } from "./sort.js";
 
@@ -24,5 +23,4 @@ fetch(
     return result;
   })
   .then((result) => sortMovie(result))
-  .then(searchMovie)
   .catch((err) => console.error(err));
