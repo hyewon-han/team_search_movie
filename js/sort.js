@@ -8,18 +8,14 @@ const movieTitle = document.querySelector(".sort-title");
 export const sortMovie = function (unsorted) {
   function avg() {
     sortVoteAverage(unsorted);
-    searchMovie();
   }
   function title() {
     sortTitle(unsorted);
-    searchMovie();
   }
   function date() {
     sortReleaseDate(unsorted);
-    searchMovie();
   }
-  voteAverage.addEventListener("click", avg);
-  movieTitle.addEventListener("click", title);
+
   releaseDate.addEventListener("click", date);
 };
 
@@ -30,6 +26,7 @@ const sortVoteAverage = (unsorted) => {
   });
   movieCards.innerHTML = "";
   sortedMovie.forEach((movie) => {
+    console.log([movie])
     addMovie(movie);
   });
 };
