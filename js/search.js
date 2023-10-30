@@ -4,10 +4,10 @@ const searchBtn = document.querySelector(".search-btn");
 const no = document.querySelector(".no-movie");
 
 export function searchMovie() {
-  const movieCard = movieCards.querySelectorAll(".movie-card");
-
   function handleSearch(e) {
+    const movieCard = movieCards.querySelectorAll(".movie-card");
     e.preventDefault();
+    console.log("서치 작동!");
     const searchMovieList = [];
     let searchedValue = searchValue.value.toLowerCase();
 
