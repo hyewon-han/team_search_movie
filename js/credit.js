@@ -30,7 +30,6 @@ async function fetchCreditContent() {
 
 async function generateCreditContent() {
   const credit = await fetchCreditContent();
-  console.log(credit);
   const cast = credit.cast;
   actorImg1.src = `https://image.tmdb.org/t/p/w200/${cast[0].profile_path}`;
   actorImg2.src = `https://image.tmdb.org/t/p/w200/${cast[1].profile_path}`;
