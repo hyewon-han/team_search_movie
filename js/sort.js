@@ -1,5 +1,4 @@
 import { addMovie } from "./movie.js";
-import { searchMovie } from "./search.js";
 const movieCards = document.querySelector(".movie-cards");
 const voteAverage = document.querySelector(".sort-vote-average");
 const releaseDate = document.querySelector(".sort-release-date");
@@ -19,7 +18,6 @@ export const sortMovie = function (unsorted) {
   function date() {
     sortReleaseDate(unsorted);
   }
-
   releaseDate.addEventListener("click", date);
 };
 
@@ -30,7 +28,6 @@ const sortVoteAverage = (unsorted) => {
   });
   movieCards.innerHTML = "";
   sortedMovie.forEach((movie) => {
-    console.log([movie])
     addMovie(movie);
   });
 };

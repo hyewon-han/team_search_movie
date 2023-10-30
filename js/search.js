@@ -7,7 +7,6 @@ export function searchMovie() {
   function handleSearch(e) {
     const movieCard = movieCards.querySelectorAll(".movie-card");
     e.preventDefault();
-    console.log("서치 작동!");
     const searchMovieList = [];
     let searchedValue = searchValue.value.toLowerCase();
 
