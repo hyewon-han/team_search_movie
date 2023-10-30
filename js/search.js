@@ -28,8 +28,6 @@ export function searchMovie() {
       alert("검색 결과가 없습니다.");
       no.style.display = "flex";
       return;
-    } else {
-      no.style.display = "none";
     }
   }
   searchBtn.addEventListener("click", handleSearch);
