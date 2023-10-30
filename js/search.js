@@ -4,7 +4,6 @@ const searchBtn = document.querySelector(".search-btn");
 const no = document.querySelector(".no-movie");
 
 export function searchMovie() {
-  console.log("searchMovie호출됨");
   const movieCard = movieCards.querySelectorAll(".movie-card");
 
   function handleSearch(e) {
@@ -25,8 +24,9 @@ export function searchMovie() {
       }
     });
     if (searchMovieList.length == 0) {
-      no.innerHTML = "No movie data.";
       alert("검색 결과가 없습니다.");
+      no.style.display = "flex";
+      return;
     }
   }
   searchBtn.addEventListener("click", handleSearch);
