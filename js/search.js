@@ -4,6 +4,7 @@ const searchBtn = document.querySelector(".search-btn");
 const no = document.querySelector(".no-movie");
 
 export function searchMovie() {
+  console.log("searchMovie호출됨");
   const movieCard = movieCards.querySelectorAll(".movie-card");
 
   function handleSearch(e) {
