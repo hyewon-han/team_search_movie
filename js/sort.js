@@ -9,13 +9,9 @@ export const sortMovie = function (unsorted) {
   function avg() {
     sortVoteAverage(unsorted);
   }
-  voteAverage.addEventListener("click", avg);
-
   function title() {
     sortTitle(unsorted);
   }
-  movieTitle.addEventListener("click", title);
-
   function date() {
     sortReleaseDate(unsorted);
   }
