@@ -20,7 +20,7 @@ body {
 footer {
   display: flex;
   justify-content: center;
-  padding: 50px;
+  padding: 30px;
 }
 
 .title {

@@ -6,6 +6,7 @@ const no = document.querySelector(".no-movie");
 export function searchMovie() {
   function handleSearch(e) {
     const movieCard = movieCards.querySelectorAll(".movie-card");
+
     e.preventDefault();
     const searchMovieList = [];
     let searchedValue = searchValue.value.toLowerCase();
@@ -20,12 +21,15 @@ export function searchMovie() {
         searchMovieList.push(title);
       } else {
         card.style.display = "none";
+        no.style.display = "none";
       }
     });
     if (searchMovieList.length == 0) {
       alert("검색 결과가 없습니다.");
       no.style.display = "flex";
       return;
+    } else {
+      no.style.display = "none";
     }
   }
   searchBtn.addEventListener("click", handleSearch);
