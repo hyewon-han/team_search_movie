@@ -19,7 +19,6 @@ export const sortMovie = function (unsorted) {
   function date() {
     sortReleaseDate(unsorted);
   }
-
   releaseDate.addEventListener("click", date);
 };
 
@@ -30,7 +29,6 @@ const sortVoteAverage = (unsorted) => {
   });
   movieCards.innerHTML = "";
   sortedMovie.forEach((movie) => {
-    console.log([movie])
     addMovie(movie);
   });
 };
@@ -40,11 +38,8 @@ const sortTitle = function (unsorted) {
   const sortedMovie = unsorted.sort(function (a, b) {
     const target1 = a.title.toUpperCase();
     const target2 = b.title.toUpperCase();
-    if (target1 > target2) {
-      return 1;
-    } else if (target1 < target2) {
-      return -1;
-    }
+    const title = (target1 > target2) ? 1 : -1;
+    return title
   });
   movieCards.innerHTML = "";
   sortedMovie.forEach((movie) => {
@@ -57,11 +52,8 @@ function sortReleaseDate(unsorted) {
   const sortedMovie = unsorted.sort((a, b) => {
     const date1 = a.release_date.replaceAll("-", "");
     const date2 = b.release_date.replaceAll("-", "");
-    if (date1 > date2) {
-      return -1;
-    } else if (date1 < date2) {
-      return 1;
-    }
+    const date = (date1 > date2) ? -1 : 1;
+    return date
   });
   movieCards.innerHTML = "";
   sortedMovie.forEach((movie) => {

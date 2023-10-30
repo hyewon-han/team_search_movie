@@ -15,10 +15,7 @@ export function addMovie(movie) {
     <div class="movie-card-overview">${movie.overview}</div>
     <div class="movie-card-vote-average">Ratings : ${movie.vote_average}</div>
   </div>`;
-  // div.addEventListener("click", () => {
-  //   const url = window.location.href + "movie.html?id=" + movie.id;
-  //   window.location.href = url;
-  // });
+
   div.id = movie.id;
   movieCards.append(div);
 }
