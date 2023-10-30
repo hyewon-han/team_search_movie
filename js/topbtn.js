@@ -1,4 +1,4 @@
-const moveTop_btn = document.querySelector(".moveTop");
+const moveTop_btn = document.querySelector(".move-top");
 
 function showTopBtn() {
   if (window.scrollY >= 179) moveTop_btn.style.visibility = "visible";

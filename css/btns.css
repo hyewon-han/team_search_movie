@@ -1,20 +1,19 @@
-#homeButton {
-  background-color: var(--green);
-  color: black;
-  border-radius: 4px;
-}
-
 body.dark-mode {
   background-color: #222;
   color: #fff;
 }
 
-#darkModeToggle {
+#dark-mode-toggle {
   background-color: black;
   color: white;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin-right: 50px;
+
+  height: 60px;
+  border-radius: 30px;
+  box-shadow: var(--box-shadow);
+  border: none;
 }
 
 .nexthome {
@@ -23,21 +22,26 @@ body.dark-mode {
   color: #222;
   letter-spacing: 0.313em;
   line-height: 1.5em;
+  margin-top: 30px;
 }
 
-#homeButton {
-  position: absolute;
-  left: 1%;
-  height: 80px;
-  width: 100px;
-
-  text-align: center;
-  font-size: 1.5rem;
+body.dark-mode {
+  background-color: #222;
+  color: #fff;
 }
 
-#darkModeToggle {
-  position: absolute;
-  height: 80px;
-  right: 1%;
-  top: 1%;
+#dark-mode-toggle {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  height: 60px;
+  border-radius: 30px;
+  box-shadow: var(--box-shadow);
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+#dark-mode-toggle:hover {
+  cursor: pointer;
 }

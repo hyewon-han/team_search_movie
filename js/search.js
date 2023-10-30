@@ -1,7 +1,7 @@
 const movieCards = document.querySelector(".movie-cards");
-const searchValue = document.getElementById("search__value");
-const searchBtn = document.querySelector(".search__btn");
-const no = document.querySelector(".noMovie");
+const searchValue = document.getElementById("search-value");
+const searchBtn = document.querySelector(".search-btn");
+const no = document.querySelector(".no-movie");
 
 export function searchMovie() {
   const movieCard = movieCards.querySelectorAll(".movie-card");
@@ -13,7 +13,7 @@ export function searchMovie() {
 
     movieCard.forEach((card) => {
       const title = card
-        .querySelector(".movie-card__title")
+        .querySelector(".movie-card-title")
         .textContent.toLowerCase();
 
       if (title.includes(searchedValue)) {
